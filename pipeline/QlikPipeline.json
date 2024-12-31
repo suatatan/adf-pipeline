@@ -1,6 +1,144 @@
 {
 	"name": "QlikPipeline",
 	"properties": {
+		"activities": [
+			{
+				"name": "RunDataFlow",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "MonthlyDataTransfer",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "CloneProcessedFile",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "RunDataFlow",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "ExcelSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureBlobStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"typeProperties": {
+							"folderPath": {
+								"value": "qlik/monthly-ingested/@{formatDateTime(utcNow(), 'MMMM-yyyy')}.xlsx",
+								"type": "Expression"
+							},
+							"fileName": ""
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					},
+					"dataSet": {
+						"source": {
+							"referenceName": "MonthlyExcelFile",
+							"type": "DatasetReference"
+						},
+						"sink": {
+							"referenceName": "ClonedExcelFile",
+							"type": "DatasetReference"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "MonthlyExcelFile",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SaveAsCSV",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "DeleteOriginalFile",
+				"type": "Delete",
+				"dependsOn": [
+					{
+						"activity": "CloneProcessedFile",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "MonthlyExcelFile",
+						"type": "DatasetReference"
+					},
+					"enableLogging": true,
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					}
+				}
+			}
+		],
 		"annotations": []
 	}
 }
