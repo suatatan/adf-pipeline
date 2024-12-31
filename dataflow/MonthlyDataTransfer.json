@@ -52,7 +52,7 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> SelectRelevantColumnsAndRename",
 				"SelectRelevantColumnsAndRename derive(Sales = toInteger(Sales),",
-				"          Date = derive(Date= toDate(Date, 'MM/dd/yyyy'))) ~> typeTransform",
+				"          Date = toDate(Date, 'MM/dd/yyyy')) ~> typeTransform",
 				"typeTransform sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
