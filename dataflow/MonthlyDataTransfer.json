@@ -1,0 +1,81 @@
+{
+	"name": "MonthlyDataTransfer",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "MonthlyExcelFile",
+						"type": "DatasetReference"
+					},
+					"name": "sourceMonthlyExcelFile"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "SQLTable",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "SelectRelevantColumnsAndRename"
+				},
+				{
+					"name": "typeTransform"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Store as string,",
+				"          {Yr Make Model} as string,",
+				"          Miles as string,",
+				"          Customer as string,",
+				"          {Sales ()} as string,",
+				"          Date as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> sourceMonthlyExcelFile",
+				"sourceMonthlyExcelFile select(mapColumn(",
+				"          Store,",
+				"          YrMakeModel = {Yr Make Model},",
+				"          Miles,",
+				"          Customer,",
+				"          Sales = {Sales ()},",
+				"          Date",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SelectRelevantColumnsAndRename",
+				"SelectRelevantColumnsAndRename derive(Sales = toInteger(Sales)) ~> typeTransform",
+				"typeTransform sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          Store as string,",
+				"          YrMakeModel as string,",
+				"          Miles as integer,",
+				"          Customer as string,",
+				"          Sales as decimal(10,3),",
+				"          SaleDate as date",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          Store,",
+				"          YrMakeModel,",
+				"          Customer,",
+				"          Sales",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}
