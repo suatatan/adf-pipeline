@@ -1,0 +1,47 @@
+{
+	"name": "MonthlyExcelFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "thismonth.xlsx",
+				"folderPath": "qlik/monthly-arrival",
+				"container": "mycontainer"
+			},
+			"sheetIndex": 0,
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Store",
+				"type": "String"
+			},
+			{
+				"name": "Yr Make Model",
+				"type": "String"
+			},
+			{
+				"name": "Miles",
+				"type": "String"
+			},
+			{
+				"name": "Customer",
+				"type": "String"
+			},
+			{
+				"name": "Sales ()",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			}
+		]
+	}
+}
