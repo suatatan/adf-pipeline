@@ -1,0 +1,9 @@
+{
+	"name": "exceladatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f0788fb2-0985-4de0-a83f-f8ed9e1e7b9b",
+		"tenantId": "6bd270d6-cec4-4d07-82f9-f604cd4ba1c8"
+	}
+}
