@@ -1,0 +1,20 @@
+{
+	"name": "powerquery1",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "ClaimExport",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  ClaimExport",
+					"dataset": {
+						"referenceName": "ClaimExport",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared ClaimExport = let AdfDoc = AzureStorage.BlobContents(\"https://suatazstorageacc.blob.core.windows.net/mycontainer/clam_export/ClaimExport.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"ClaimExport\",\r\n  #\"Filtered rows\" = Table.SelectRows(Source, each [#\"*This is the canned report exported from PCRS (export begins on row 5)\"] <> null and [#\"*This is the canned report exported from PCRS (export begins on row 5)\"] <> \"\"),\r\n  #\"Removed top rows\" = Table.Skip(#\"Filtered rows\", 2),\r\n  #\"Filtered rows 1\" = Table.SelectRows(#\"Removed top rows\", each Text.Contains([#\"*This is the canned report exported from PCRS (export begins on row 5)\"], \"CL\")),\r\n  #\"Grouped rows\" = Table.Group(#\"Filtered rows 1\", {\"_10\"}, {{\"Count\", each Table.RowCount(_), Int64.Type}}) in #\"Grouped rows\";\r\n",
+			"documentLocale": "en-us"
+		}
+	}
+}
