@@ -69,7 +69,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('OnlyCSV').output.value",
+						"value": "@activity('Adhoc folder oku').output.childItems",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -106,7 +106,8 @@
 								"sink": {
 									"type": "SqlServerSink",
 									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false
+									"sqlWriterUseTableLock": false,
+									"tableOption": "autoCreate"
 								},
 								"enableStaging": false,
 								"translator": {
