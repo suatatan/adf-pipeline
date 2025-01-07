@@ -122,7 +122,7 @@
 											"referenceName": "linkedLoggingService",
 											"type": "LinkedServiceReference"
 										},
-										"path": "mycontainer/excela"
+										"path": "mycontainer/excela/01-contract-export/09-log"
 									}
 								},
 								"translator": {
