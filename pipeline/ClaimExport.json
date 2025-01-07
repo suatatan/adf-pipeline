@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -68,7 +69,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Adhoc folder oku').output.childItems",
+						"value": "@activity('OnlyCSV').output.value",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -93,7 +94,7 @@
 										"recursive": true,
 										"wildcardFolderPath": "01-excela/01-adhoc",
 										"wildcardFileName": {
-											"value": "@item()",
+											"value": "@item().name",
 											"type": "Expression"
 										},
 										"enablePartitionDiscovery": false
