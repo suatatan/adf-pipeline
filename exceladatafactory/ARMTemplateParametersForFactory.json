@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "exceladatafactory"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureFileStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"linkedLoggingService_connectionString": {
+			"value": ""
+		},
+		"ls_func_functionKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://suatazstorageacc.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "excela-server.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "excela-sandbox-db"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "excela_protect"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "excela-server.database.windows.net"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "excela-sandbox-db"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "excela_protect"
+		},
+		"ls_func_properties_typeProperties_functionAppUrl": {
+			"value": "https://fnapp-excela-datatransform.azurewebsites.net"
+		}
+	}
+}
