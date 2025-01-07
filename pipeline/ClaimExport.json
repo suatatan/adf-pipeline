@@ -92,7 +92,7 @@
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
 										"recursive": true,
-										"wildcardFolderPath": "01-excela/01-adhoc",
+										"wildcardFolderPath": "excela/01-contract-export/01-adhoc/",
 										"wildcardFileName": {
 											"value": "@item().name",
 											"type": "Expression"
