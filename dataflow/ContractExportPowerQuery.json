@@ -3,7 +3,16 @@
 	"properties": {
 		"type": "WranglingDataFlow",
 		"typeProperties": {
-			"sources": []
+			"sources": [
+				{
+					"name": "ContractExport",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  ContractExport",
+					"dataset": {
+						"referenceName": "ContractExport",
+						"type": "DatasetReference"
+					}
+				}
+			]
 		}
 	}
 }
