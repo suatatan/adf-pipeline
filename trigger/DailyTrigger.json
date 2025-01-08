@@ -16,15 +16,15 @@
 			"recurrence": {
 				"frequency": "Day",
 				"interval": 1,
-				"startTime": "2025-01-08T22:36:00",
+				"startTime": "2025-01-07T22:36:00",
 				"endTime": "2025-01-10T19:32:00",
 				"timeZone": "Turkey Standard Time",
 				"schedule": {
 					"minutes": [
-						39
+						44
 					],
 					"hours": [
-						22
+						21
 					]
 				}
 			}
