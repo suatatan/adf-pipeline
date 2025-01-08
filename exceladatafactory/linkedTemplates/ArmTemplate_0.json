@@ -3297,7 +3297,35 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ClaimExport')]",
+			"name": "[concat(parameters('factoryName'), '/contract_export_adhoc_archive')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"folderPath": "excela/01-contract-export/04-adhoc-arch",
+						"container": "mycontainer"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ContractExport')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -3449,6 +3477,121 @@
 											"parameters": {}
 										}
 									]
+								},
+								{
+									"name": "Copy data to archive folder",
+									"type": "Copy",
+									"dependsOn": [
+										{
+											"activity": "LoadCSVtoSQL",
+											"dependencyConditions": [
+												"Succeeded"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"source": {
+											"type": "DelimitedTextSource",
+											"storeSettings": {
+												"type": "AzureBlobStorageReadSettings",
+												"recursive": true,
+												"wildcardFolderPath": "excela/01-contract-export/01-adhoc",
+												"wildcardFileName": {
+													"value": "@item().name",
+													"type": "Expression"
+												},
+												"enablePartitionDiscovery": false
+											},
+											"formatSettings": {
+												"type": "DelimitedTextReadSettings"
+											}
+										},
+										"sink": {
+											"type": "DelimitedTextSink",
+											"storeSettings": {
+												"type": "AzureBlobStorageWriteSettings"
+											},
+											"formatSettings": {
+												"type": "DelimitedTextWriteSettings",
+												"quoteAllText": true,
+												"fileExtension": ".csv"
+											}
+										},
+										"enableStaging": false,
+										"translator": {
+											"type": "TabularTranslator",
+											"typeConversion": true,
+											"typeConversionSettings": {
+												"allowDataTruncation": true,
+												"treatBooleanAsNumber": false
+											}
+										}
+									},
+									"inputs": [
+										{
+											"referenceName": "contract_export_adhoc",
+											"type": "DatasetReference",
+											"parameters": {}
+										}
+									],
+									"outputs": [
+										{
+											"referenceName": "contract_export_adhoc_archive",
+											"type": "DatasetReference",
+											"parameters": {}
+										}
+									]
+								},
+								{
+									"name": "Delete original",
+									"type": "Delete",
+									"dependsOn": [
+										{
+											"activity": "Copy data to archive folder",
+											"dependencyConditions": [
+												"Succeeded"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"dataset": {
+											"referenceName": "contract_export_adhoc",
+											"type": "DatasetReference",
+											"parameters": {}
+										},
+										"logStorageSettings": {
+											"linkedServiceName": {
+												"referenceName": "linkedLoggingService",
+												"type": "LinkedServiceReference"
+											}
+										},
+										"enableLogging": true,
+										"storeSettings": {
+											"type": "AzureBlobStorageReadSettings",
+											"recursive": true,
+											"wildcardFileName": {
+												"value": "@item().name",
+												"type": "Expression"
+											},
+											"enablePartitionDiscovery": false
+										}
+									}
 								}
 							]
 						}
@@ -3463,6 +3606,7 @@
 				"[concat(variables('factoryId'), '/datasets/contract_export_adhoc')]",
 				"[concat(variables('factoryId'), '/datasets/ForEachFile')]",
 				"[concat(variables('factoryId'), '/datasets/ContractExport_SqlServerTable')]",
+				"[concat(variables('factoryId'), '/datasets/contract_export_adhoc_archive')]",
 				"[concat(variables('factoryId'), '/linkedServices/linkedLoggingService')]"
 			]
 		},
@@ -3575,31 +3719,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/MonthlyExcelFile')]",
 				"[concat(variables('factoryId'), '/datasets/SQLTable')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/powerquery1')]",
-			"type": "Microsoft.DataFactory/factories/dataflows",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "WranglingDataFlow",
-				"typeProperties": {
-					"sources": [
-						{
-							"name": "ClaimExport",
-							"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> ClaimExport",
-							"dataset": {
-								"referenceName": "ClaimExport",
-								"type": "DatasetReference"
-							}
-						}
-					],
-					"script": "section Section1;\r\nshared ClaimExport = let AdfDoc = AzureStorage.BlobContents(\"https://suatazstorageacc.blob.core.windows.net/mycontainer/clam_export/ClaimExport.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"ClaimExport\",\r\n  #\"Filtered rows\" = Table.SelectRows(Source, each [#\"*This is the canned report exported from PCRS (export begins on row 5)\"] <> null and [#\"*This is the canned report exported from PCRS (export begins on row 5)\"] <> \"\"),\r\n  #\"Removed top rows\" = Table.Skip(#\"Filtered rows\", 2),\r\n  #\"Filtered rows 1\" = Table.SelectRows(#\"Removed top rows\", each Text.Contains([#\"*This is the canned report exported from PCRS (export begins on row 5)\"], \"CL\")),\r\n  #\"Grouped rows\" = Table.Group(#\"Filtered rows 1\", {\"_10\"}, {{\"Count\", each Table.RowCount(_), Int64.Type}}) in #\"Grouped rows\";\r\n",
-					"documentLocale": "en-us"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/ClaimExport')]"
 			]
 		}
 	]

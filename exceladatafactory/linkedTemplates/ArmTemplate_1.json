@@ -13,6 +13,29 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/powerquery1')]",
+			"type": "Microsoft.DataFactory/factories/dataflows",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "WranglingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"name": "ClaimExport",
+							"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> ClaimExport",
+							"dataset": {
+								"referenceName": "ClaimExport",
+								"type": "DatasetReference"
+							}
+						}
+					],
+					"script": "section Section1;\r\nshared ClaimExport = let AdfDoc = AzureStorage.BlobContents(\"https://suatazstorageacc.blob.core.windows.net/mycontainer/clam_export/ClaimExport.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"ClaimExport\",\r\n  #\"Filtered rows\" = Table.SelectRows(Source, each [#\"*This is the canned report exported from PCRS (export begins on row 5)\"] <> null and [#\"*This is the canned report exported from PCRS (export begins on row 5)\"] <> \"\"),\r\n  #\"Removed top rows\" = Table.Skip(#\"Filtered rows\", 2),\r\n  #\"Filtered rows 1\" = Table.SelectRows(#\"Removed top rows\", each Text.Contains([#\"*This is the canned report exported from PCRS (export begins on row 5)\"], \"CL\")),\r\n  #\"Grouped rows\" = Table.Group(#\"Filtered rows 1\", {\"_10\"}, {{\"Count\", each Table.RowCount(_), Int64.Type}}) in #\"Grouped rows\";\r\n",
+					"documentLocale": "en-us"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/QlikPipeline')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -156,7 +179,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DailyTrigger')]",
+			"name": "[concat(parameters('factoryName'), '/ContractExportDailyTrigger')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -165,7 +188,7 @@
 				"pipelines": [
 					{
 						"pipelineReference": {
-							"referenceName": "ClaimExport",
+							"referenceName": "ContractExport",
 							"type": "PipelineReference"
 						},
 						"parameters": {}
@@ -176,15 +199,14 @@
 					"recurrence": {
 						"frequency": "Day",
 						"interval": 1,
-						"startTime": "2025-01-07T22:36:00",
-						"endTime": "2025-01-10T19:32:00",
+						"startTime": "2025-01-08T20:19:00",
 						"timeZone": "Turkey Standard Time",
 						"schedule": {
 							"minutes": [
-								50
+								23
 							],
 							"hours": [
-								22
+								23
 							]
 						}
 					}

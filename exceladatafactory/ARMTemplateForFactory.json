@@ -73,7 +73,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/ClaimExport')]",
+			"name": "[concat(parameters('factoryName'), '/ContractExport')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -225,6 +225,121 @@
 											"parameters": {}
 										}
 									]
+								},
+								{
+									"name": "Copy data to archive folder",
+									"type": "Copy",
+									"dependsOn": [
+										{
+											"activity": "LoadCSVtoSQL",
+											"dependencyConditions": [
+												"Succeeded"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"source": {
+											"type": "DelimitedTextSource",
+											"storeSettings": {
+												"type": "AzureBlobStorageReadSettings",
+												"recursive": true,
+												"wildcardFolderPath": "excela/01-contract-export/01-adhoc",
+												"wildcardFileName": {
+													"value": "@item().name",
+													"type": "Expression"
+												},
+												"enablePartitionDiscovery": false
+											},
+											"formatSettings": {
+												"type": "DelimitedTextReadSettings"
+											}
+										},
+										"sink": {
+											"type": "DelimitedTextSink",
+											"storeSettings": {
+												"type": "AzureBlobStorageWriteSettings"
+											},
+											"formatSettings": {
+												"type": "DelimitedTextWriteSettings",
+												"quoteAllText": true,
+												"fileExtension": ".csv"
+											}
+										},
+										"enableStaging": false,
+										"translator": {
+											"type": "TabularTranslator",
+											"typeConversion": true,
+											"typeConversionSettings": {
+												"allowDataTruncation": true,
+												"treatBooleanAsNumber": false
+											}
+										}
+									},
+									"inputs": [
+										{
+											"referenceName": "contract_export_adhoc",
+											"type": "DatasetReference",
+											"parameters": {}
+										}
+									],
+									"outputs": [
+										{
+											"referenceName": "contract_export_adhoc_archive",
+											"type": "DatasetReference",
+											"parameters": {}
+										}
+									]
+								},
+								{
+									"name": "Delete original",
+									"type": "Delete",
+									"dependsOn": [
+										{
+											"activity": "Copy data to archive folder",
+											"dependencyConditions": [
+												"Succeeded"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"dataset": {
+											"referenceName": "contract_export_adhoc",
+											"type": "DatasetReference",
+											"parameters": {}
+										},
+										"logStorageSettings": {
+											"linkedServiceName": {
+												"referenceName": "linkedLoggingService",
+												"type": "LinkedServiceReference"
+											}
+										},
+										"enableLogging": true,
+										"storeSettings": {
+											"type": "AzureBlobStorageReadSettings",
+											"recursive": true,
+											"wildcardFileName": {
+												"value": "@item().name",
+												"type": "Expression"
+											},
+											"enablePartitionDiscovery": false
+										}
+									}
 								}
 							]
 						}
@@ -239,6 +354,7 @@
 				"[concat(variables('factoryId'), '/datasets/contract_export_adhoc')]",
 				"[concat(variables('factoryId'), '/datasets/ForEachFile')]",
 				"[concat(variables('factoryId'), '/datasets/ContractExport_SqlServerTable')]",
+				"[concat(variables('factoryId'), '/datasets/contract_export_adhoc_archive')]",
 				"[concat(variables('factoryId'), '/linkedServices/linkedLoggingService')]"
 			]
 		},
@@ -3752,7 +3868,35 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DailyTrigger')]",
+			"name": "[concat(parameters('factoryName'), '/contract_export_adhoc_archive')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"folderPath": "excela/01-contract-export/04-adhoc-arch",
+						"container": "mycontainer"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ContractExportDailyTrigger')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -3761,7 +3905,7 @@
 				"pipelines": [
 					{
 						"pipelineReference": {
-							"referenceName": "ClaimExport",
+							"referenceName": "ContractExport",
 							"type": "PipelineReference"
 						},
 						"parameters": {}
@@ -3772,22 +3916,21 @@
 					"recurrence": {
 						"frequency": "Day",
 						"interval": 1,
-						"startTime": "2025-01-07T22:36:00",
-						"endTime": "2025-01-10T19:32:00",
+						"startTime": "2025-01-08T20:19:00",
 						"timeZone": "Turkey Standard Time",
 						"schedule": {
 							"minutes": [
-								50
+								23
 							],
 							"hours": [
-								22
+								23
 							]
 						}
 					}
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/ClaimExport')]"
+				"[concat(variables('factoryId'), '/pipelines/ContractExport')]"
 			]
 		}
 	]
