@@ -1,0 +1,25 @@
+{
+	"name": "DailyTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "ClaimExport",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2025-01-09T22:34:00",
+				"endTime": "2025-01-10T19:32:00",
+				"timeZone": "Turkey Standard Time"
+			}
+		}
+	}
+}
