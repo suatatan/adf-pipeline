@@ -3775,7 +3775,14 @@
 						"startTime": "2025-01-08T22:36:00",
 						"endTime": "2025-01-10T19:32:00",
 						"timeZone": "Turkey Standard Time",
-						"schedule": {}
+						"schedule": {
+							"minutes": [
+								39
+							],
+							"hours": [
+								22
+							]
+						}
 					}
 				}
 			},
