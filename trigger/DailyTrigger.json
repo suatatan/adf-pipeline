@@ -21,10 +21,10 @@
 				"timeZone": "Turkey Standard Time",
 				"schedule": {
 					"minutes": [
-						50
+						20
 					],
 					"hours": [
-						22
+						23
 					]
 				}
 			}
