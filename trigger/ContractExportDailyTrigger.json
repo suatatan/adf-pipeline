@@ -1,0 +1,25 @@
+{
+	"name": "ContractExportDailyTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2025-01-08T20:19:00",
+				"timeZone": "Turkey Standard Time",
+				"schedule": {
+					"minutes": [
+						23
+					],
+					"hours": [
+						23
+					]
+				}
+			}
+		}
+	}
+}
