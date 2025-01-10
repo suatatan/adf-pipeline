@@ -1,0 +1,20 @@
+{
+	"name": "powerquery1",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "ClaimExportFile",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinferDriftedColumnTypes: true,\n\tignoreNoFilesFound: false) ~>  ClaimExportFile",
+					"dataset": {
+						"referenceName": "ClaimExportFile",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared ClaimExportFile = let AdfDoc = AzureStorage.BlobContents(\"https://suatazstorageacc.blob.core.windows.net/mycontainer/simulation/PPM Reports/ClaimExport.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"ClaimExportFile\",\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"Claim Mileage\", Int64.Type}, {\"Customer Phone\", type text}, {\"Servicer Phone\", Int64.Type}}) in #\"Changed column type\";\r\n",
+			"documentLocale": "en-us"
+		}
+	}
+}

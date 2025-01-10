@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "PCRS-PCMI/ClaimExport"
+			"name": "Product/PCRS-PCMI/ClaimExport"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
@@ -24,279 +24,279 @@
 		},
 		"schema": [
 			{
-				"name": "*This is the canned report exported from PCRS (export begins on row 5)",
+				"name": "Claim Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_1",
+				"name": "Contract Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_2",
+				"name": "Activity",
 				"type": "String"
 			},
 			{
-				"name": "Prop_3",
+				"name": "Agent Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_4",
+				"name": "Agent Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_5",
+				"name": "Alternate Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_6",
+				"name": "Check Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_7",
+				"name": "Claim Description",
 				"type": "String"
 			},
 			{
-				"name": "Prop_8",
+				"name": "Claim Detail Status",
 				"type": "String"
 			},
 			{
-				"name": "Prop_9",
+				"name": "Claim Mileage",
 				"type": "String"
 			},
 			{
-				"name": "Prop_10",
+				"name": "Claim Status",
 				"type": "String"
 			},
 			{
-				"name": "Prop_11",
+				"name": "Coverage Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_12",
+				"name": "Coverage Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_13",
+				"name": "Created By",
 				"type": "String"
 			},
 			{
-				"name": "Prop_14",
+				"name": "Customer Address 1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_15",
+				"name": "Customer Address 2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_16",
+				"name": "Customer City",
 				"type": "String"
 			},
 			{
-				"name": "Prop_17",
+				"name": "Customer Country",
 				"type": "String"
 			},
 			{
-				"name": "Prop_18",
+				"name": "Customer Email",
 				"type": "String"
 			},
 			{
-				"name": "Prop_19",
+				"name": "Customer First Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_20",
+				"name": "Customer Last name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_21",
+				"name": "Customer Phone",
 				"type": "String"
 			},
 			{
-				"name": "Prop_22",
+				"name": "Customer State",
 				"type": "String"
 			},
 			{
-				"name": "Prop_23",
+				"name": "Customer Zip",
 				"type": "String"
 			},
 			{
-				"name": "Prop_24",
+				"name": "Claim Date Claim is Reported",
 				"type": "String"
 			},
 			{
-				"name": "Prop_25",
+				"name": "Date Paid",
 				"type": "String"
 			},
 			{
-				"name": "Prop_26",
+				"name": "Insurer",
 				"type": "String"
 			},
 			{
-				"name": "Prop_27",
+				"name": "Labor Cost",
 				"type": "String"
 			},
 			{
-				"name": "Prop_28",
+				"name": "Labor Tax 1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_29",
+				"name": "Labor Tax 2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_30",
+				"name": "Loss Cause Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_31",
+				"name": "Loss Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_32",
+				"name": "Loss Code Description",
 				"type": "String"
 			},
 			{
-				"name": "Prop_33",
+				"name": "Make",
 				"type": "String"
 			},
 			{
-				"name": "Prop_34",
+				"name": "Part Tax 1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_35",
+				"name": "Part Tax 2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_36",
+				"name": "Parts Cost",
 				"type": "String"
 			},
 			{
-				"name": "Prop_37",
+				"name": "Pay Method",
 				"type": "String"
 			},
 			{
-				"name": "Prop_38",
+				"name": "Payee Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_39",
+				"name": "Payee Type",
 				"type": "String"
 			},
 			{
-				"name": "Prop_40",
+				"name": "Payment Method",
 				"type": "String"
 			},
 			{
-				"name": "Prop_41",
+				"name": "Repair Completion Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_42",
+				"name": "RO Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_43",
+				"name": "sActivityCode",
 				"type": "String"
 			},
 			{
-				"name": "Prop_44",
+				"name": "Sale Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_45",
+				"name": "Sale Odom",
 				"type": "String"
 			},
 			{
-				"name": "Prop_46",
+				"name": "Selling Dealer Address",
 				"type": "String"
 			},
 			{
-				"name": "Prop_47",
+				"name": "Selling Dealer City",
 				"type": "String"
 			},
 			{
-				"name": "Prop_48",
+				"name": "Selling Dealer Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_49",
+				"name": "Selling Dealer Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_50",
+				"name": "Selling Dealer State",
 				"type": "String"
 			},
 			{
-				"name": "Prop_51",
+				"name": "Selling Dealer Zip",
 				"type": "String"
 			},
 			{
-				"name": "Prop_52",
+				"name": "Servicer Address",
 				"type": "String"
 			},
 			{
-				"name": "Prop_53",
+				"name": "Servicer City",
 				"type": "String"
 			},
 			{
-				"name": "Prop_54",
+				"name": "Servicer Email",
 				"type": "String"
 			},
 			{
-				"name": "Prop_55",
+				"name": "Servicer Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_56",
+				"name": "Servicer Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_57",
+				"name": "Servicer Phone",
 				"type": "String"
 			},
 			{
-				"name": "Prop_58",
+				"name": "Servicer State",
 				"type": "String"
 			},
 			{
-				"name": "Prop_59",
+				"name": "Servicer Zip",
 				"type": "String"
 			},
 			{
-				"name": "Prop_60",
+				"name": "Term Month",
 				"type": "String"
 			},
 			{
-				"name": "Prop_61",
+				"name": "Total Labor Tax",
 				"type": "String"
 			},
 			{
-				"name": "Prop_62",
+				"name": "Total Paid Amount",
 				"type": "String"
 			},
 			{
-				"name": "Prop_63",
+				"name": "Total Part Tax",
 				"type": "String"
 			},
 			{
-				"name": "Prop_64",
+				"name": "TPA Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_65",
+				"name": "Vehicle Age Type",
 				"type": "String"
 			},
 			{
-				"name": "Prop_66",
+				"name": "Vehicle Model",
 				"type": "String"
 			},
 			{
-				"name": "Prop_67",
+				"name": "VIN",
 				"type": "String"
 			},
 			{
-				"name": "Prop_68",
+				"name": "Year",
 				"type": "String"
 			}
 		]
