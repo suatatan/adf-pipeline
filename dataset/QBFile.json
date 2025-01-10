@@ -13,7 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "QB Current Quarter Earning Details_All Earn Sets_Contract Level.csv",
+				"fileName": "QB.csv",
 				"folderPath": "simulation/PPM Reports",
 				"container": "mycontainer"
 			},
