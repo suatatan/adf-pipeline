@@ -1,5 +1,5 @@
 {
-	"name": "dataflow1",
+	"name": "ContractExportDataFlow",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
