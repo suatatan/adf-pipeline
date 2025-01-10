@@ -196,7 +196,7 @@
 				"     validateSchema: false,",
 				"     limit: 20,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive({Total Payments} = toDecimal(\"Total Payments\", 10, 2)) ~> SourceContractExport"
+				"source1 derive({Amount Financed} = toDecimal(\"Amount Financed\", 10, 2)) ~> SourceContractExport"
 			]
 		}
 	}
