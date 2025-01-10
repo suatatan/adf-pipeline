@@ -27,6 +27,9 @@
 				}
 			],
 			"scriptLines": [
+				"parameters{",
+				"     x as string",
+				"}",
 				"source(output(",
 				"          {Accounting Period} as string,",
 				"          {Activation Date} as string,",
