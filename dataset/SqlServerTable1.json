@@ -1,19 +1,19 @@
 {
-	"name": "ContractExportSQL",
+	"name": "SqlServerTable1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "PCRS-PCMI/ContractExport"
+			"name": "PCRS-PCMI/QB"
 		},
 		"annotations": [],
 		"type": "SqlServerTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "ContractExport"
+			"table": "QB"
 		}
 	}
 }

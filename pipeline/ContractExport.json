@@ -1,5 +1,5 @@
 {
-	"name": "ContractExportPipeline",
+	"name": "ContractExport",
 	"properties": {
 		"activities": [
 			{
@@ -58,13 +58,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "FlatFile",
+						"referenceName": "ContractExportFile",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "SQLTab",
+						"referenceName": "ContractExportSQL",
 						"type": "DatasetReference"
 					}
 				]

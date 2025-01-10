@@ -1,9 +1,12 @@
 {
-	"name": "FlatFile",
+	"name": "ContractExportFile",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "PCRS-PCMI/ContractExport"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
