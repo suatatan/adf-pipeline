@@ -12,7 +12,15 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ContractExportSQL",
+						"type": "DatasetReference"
+					},
+					"name": "ClaimExportSink"
+				}
+			],
 			"transformations": [
 				{
 					"name": "SourceContractExport"
@@ -198,7 +206,16 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 derive({Amount Financed} = toDecimal({Amount Financed},18,2),",
 				"          {Activation Date} = toDate({Activation Date}),",
-				"          {Cancel Amount} = toDecimal({Amount Financed},18,2)) ~> SourceContractExport"
+				"          {Cancel Amount} = toDecimal({Amount Financed},18,2)) ~> SourceContractExport",
+				"SourceContractExport sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> ClaimExportSink"
 			]
 		}
 	}
