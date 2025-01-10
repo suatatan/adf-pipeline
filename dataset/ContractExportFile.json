@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "PCRS-PCMI/ContractExport"
+			"name": "Product/PCRS-PCMI/ContractExport"
 		},
 		"annotations": [],
 		"type": "DelimitedText",

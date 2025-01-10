@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "PCRS-PCMI/ClaimExport"
+			"name": "Product/PCRS-PCMI/ClaimExport"
 		},
 		"annotations": [],
 		"type": "SqlServerTable",

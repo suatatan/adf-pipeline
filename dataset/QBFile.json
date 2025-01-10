@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "PCRS-PCMI/QB"
+			"name": "Product/PCRS-PCMI/QB"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
