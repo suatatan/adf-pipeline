@@ -208,7 +208,7 @@
 				"          {Cancel Amount} = toDecimal({Cancel Amount},18,2),",
 				"          {Customer Write Off Amount} = toDecimal({Customer Write Off Amount}),",
 				"          each(match(name == \"Amount Financed\"), $$ = toDecimal($$,18,2)),",
-				"          each(match(name == \"Effective Date\"), $$ = toDate({$$}))) ~> SourceContractExport",
+				"          each(match(name == \"Effective Date\"), $$ = ERROR_FUNCTION('toDate({$$)'))) ~> SourceContractExport",
 				"SourceContractExport sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
