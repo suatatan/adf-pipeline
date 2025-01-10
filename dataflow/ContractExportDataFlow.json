@@ -27,9 +27,6 @@
 				}
 			],
 			"scriptLines": [
-				"parameters{",
-				"     x as string",
-				"}",
 				"source(output(",
 				"          {Accounting Period} as string,",
 				"          {Activation Date} as string,",
@@ -210,7 +207,7 @@
 				"source1 derive(each(match(locate(\"Amount\", name) > 0), $$ = toDecimal($$,18,2)),",
 				"          each(match(locate(\"Fee\", name) > 0), $$ = toDecimal($$,18,2)),",
 				"          {Accounting Period} = toDate({Accounting Period}, \"YYYY-MM-DD\"),",
-				"          {Activation Date} = toDate({Activation Date}, \"YYYY-MM-DD\")) ~> SourceContractExport",
+				"          {} = ERROR_FUNCTION('')) ~> SourceContractExport",
 				"SourceContractExport sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
