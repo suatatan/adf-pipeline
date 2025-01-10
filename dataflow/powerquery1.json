@@ -1,0 +1,20 @@
+{
+	"name": "powerquery1",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "ContractExportFile",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  ContractExportFile",
+					"dataset": {
+						"referenceName": "ContractExportFile",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared ContractExportFile = let AdfDoc = AzureStorage.BlobContents(\"https://suatazstorageacc.blob.core.windows.net/mycontainer/simulation/PPM Reports/ContractExport.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"ContractExportFile\",\r\n  #\"Filled up\" = Table.FillUp(Source, {\"Activation Date\"}) in #\"Filled up\";\r\n",
+			"documentLocale": "en-us"
+		}
+	}
+}
