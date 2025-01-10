@@ -1,5 +1,5 @@
 {
-	"name": "ContractExportFileDataset",
+	"name": "date_file_contract_export",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
@@ -24,691 +24,687 @@
 		},
 		"schema": [
 			{
-				"name": "*This is the canned report exported from PCRS (export begins on row 5)",
+				"name": "Accounting Period",
 				"type": "String"
 			},
 			{
-				"name": "Prop_1",
+				"name": "Activation Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_2",
+				"name": "Agent",
 				"type": "String"
 			},
 			{
-				"name": "Prop_3",
+				"name": "Alternate Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_4",
+				"name": "Amount Financed",
 				"type": "String"
 			},
 			{
-				"name": "Prop_5",
+				"name": "APR",
 				"type": "String"
 			},
 			{
-				"name": "Prop_6",
+				"name": "Balloon Amount",
 				"type": "String"
 			},
 			{
-				"name": "Prop_7",
+				"name": "Billing Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_8",
+				"name": "Cancel Amount",
 				"type": "String"
 			},
 			{
-				"name": "Prop_9",
+				"name": "Cancel Amount (w/out Tax)",
 				"type": "String"
 			},
 			{
-				"name": "Prop_10",
+				"name": "Cancel Bill Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_11",
+				"name": "Cancel Factor %",
 				"type": "String"
 			},
 			{
-				"name": "Prop_12",
+				"name": "Cancel Method",
 				"type": "String"
 			},
 			{
-				"name": "Prop_13",
+				"name": "Cancel Reason",
 				"type": "String"
 			},
 			{
-				"name": "Prop_14",
+				"name": "Cancel Report Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_15",
+				"name": "Cancellation Effective Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_16",
+				"name": "Cancellation Fee",
 				"type": "String"
 			},
 			{
-				"name": "Prop_17",
+				"name": "Cancellation Miles",
 				"type": "String"
 			},
 			{
-				"name": "Prop_18",
+				"name": "Check Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_19",
+				"name": "Check Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_20",
+				"name": "Co-Buyer Address 1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_21",
+				"name": "Co-Buyer Address 2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_22",
+				"name": "Co-Buyer City",
 				"type": "String"
 			},
 			{
-				"name": "Prop_23",
+				"name": "Co-Buyer Country",
 				"type": "String"
 			},
 			{
-				"name": "Prop_24",
+				"name": "Co-Buyer Email",
 				"type": "String"
 			},
 			{
-				"name": "Prop_25",
+				"name": "Co-Buyer First Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_26",
+				"name": "Co-Buyer Last Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_27",
+				"name": "Co-Buyer Phone Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_28",
+				"name": "Co-Buyer Secondary Phone Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_29",
+				"name": "Co-Buyer State",
 				"type": "String"
 			},
 			{
-				"name": "Prop_30",
+				"name": "Co-Buyer Zip Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_31",
+				"name": "Contract #",
 				"type": "String"
 			},
 			{
-				"name": "Prop_32",
+				"name": "Contract Payment Batch Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_33",
+				"name": "Contract Status",
 				"type": "String"
 			},
 			{
-				"name": "Prop_34",
+				"name": "Coverage Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_35",
+				"name": "Coverage Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_36",
+				"name": "Created By User",
 				"type": "String"
 			},
 			{
-				"name": "Prop_37",
+				"name": "Culture",
 				"type": "String"
 			},
 			{
-				"name": "Prop_38",
+				"name": "Currency",
 				"type": "String"
 			},
 			{
-				"name": "Prop_39",
+				"name": "Customer Address 1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_40",
+				"name": "Customer Address 2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_41",
+				"name": "Customer City",
 				"type": "String"
 			},
 			{
-				"name": "Prop_42",
+				"name": "Customer Country",
 				"type": "String"
 			},
 			{
-				"name": "Prop_43",
+				"name": "Customer Email",
 				"type": "String"
 			},
 			{
-				"name": "Prop_44",
+				"name": "Customer First Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_45",
+				"name": "Customer Last Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_46",
+				"name": "Customer Phone Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_47",
+				"name": "Customer Secondary Phone",
 				"type": "String"
 			},
 			{
-				"name": "Prop_48",
+				"name": "Customer State",
 				"type": "String"
 			},
 			{
-				"name": "Prop_49",
+				"name": "Customer Write Off Amount",
 				"type": "String"
 			},
 			{
-				"name": "Prop_50",
+				"name": "Customer Zip Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_51",
+				"name": "Deal Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_52",
+				"name": "Dealer Address 1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_53",
+				"name": "Dealer Address 2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_54",
+				"name": "Dealer City",
 				"type": "String"
 			},
 			{
-				"name": "Prop_55",
+				"name": "Dealer Country",
 				"type": "String"
 			},
 			{
-				"name": "Prop_56",
+				"name": "Dealer Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_57",
+				"name": "Dealer Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_58",
+				"name": "Dealer Remit tax 1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_59",
+				"name": "Dealer Remit tax 2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_60",
+				"name": "Dealer State/Province",
 				"type": "String"
 			},
 			{
-				"name": "Prop_61",
+				"name": "Dealer Zip Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_62",
+				"name": "Deductible Amount",
 				"type": "String"
 			},
 			{
-				"name": "Prop_63",
+				"name": "Effective Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_64",
+				"name": "Effective Odometer",
 				"type": "String"
 			},
 			{
-				"name": "Prop_65",
+				"name": "Entry Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_66",
+				"name": "Expiration Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_67",
+				"name": "Expiration Odometer",
 				"type": "String"
 			},
 			{
-				"name": "Prop_68",
+				"name": "F&I Manager EID",
 				"type": "String"
 			},
 			{
-				"name": "Prop_69",
+				"name": "F&I Manager Licence #",
 				"type": "String"
 			},
 			{
-				"name": "Prop_70",
+				"name": "F&I Manager Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_71",
+				"name": "F&I Markup",
 				"type": "String"
 			},
 			{
-				"name": "Prop_72",
+				"name": "Finance Type",
 				"type": "String"
 			},
 			{
-				"name": "Prop_73",
+				"name": "Finance/Lease Term",
 				"type": "String"
 			},
 			{
-				"name": "Prop_74",
+				"name": "First Payment Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_75",
+				"name": "In-Service Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_76",
+				"name": "Insurance Company",
 				"type": "String"
 			},
 			{
-				"name": "Prop_77",
+				"name": "Insurance Company Code",
 				"type": "String"
 			},
 			{
-				"name": "Prop_78",
+				"name": "Invoice",
 				"type": "String"
 			},
 			{
-				"name": "Prop_79",
+				"name": "Lender",
 				"type": "String"
 			},
 			{
-				"name": "Prop_80",
+				"name": "Monthly Payment",
 				"type": "String"
 			},
 			{
-				"name": "Prop_81",
+				"name": "MSRP/NADA",
 				"type": "String"
 			},
 			{
-				"name": "Prop_82",
+				"name": "Net Cost",
 				"type": "String"
 			},
 			{
-				"name": "Prop_83",
+				"name": "Paid Claim Deduction",
 				"type": "String"
 			},
 			{
-				"name": "Prop_84",
+				"name": "Pay Method",
 				"type": "String"
 			},
 			{
-				"name": "Prop_85",
+				"name": "Payee Type",
 				"type": "String"
 			},
 			{
-				"name": "Prop_86",
+				"name": "Payment Frequency",
 				"type": "String"
 			},
 			{
-				"name": "Prop_87",
+				"name": "Product Type",
 				"type": "String"
 			},
 			{
-				"name": "Prop_88",
+				"name": "Reason",
 				"type": "String"
 			},
 			{
-				"name": "Prop_89",
+				"name": "Ref. Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_90",
+				"name": "Refund From Dealer",
 				"type": "String"
 			},
 			{
-				"name": "Prop_91",
+				"name": "Refund From TPA",
 				"type": "String"
 			},
 			{
-				"name": "Prop_92",
+				"name": "Register Ref #",
 				"type": "String"
 			},
 			{
-				"name": "Prop_93",
+				"name": "Remittance Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_94",
+				"name": "Report Group",
 				"type": "String"
 			},
 			{
-				"name": "Prop_95",
+				"name": "Retail Cost",
 				"type": "String"
 			},
 			{
-				"name": "Prop_96",
+				"name": "Retail Refund Base",
 				"type": "String"
 			},
 			{
-				"name": "Prop_97",
+				"name": "Retail Tax 1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_98",
+				"name": "Retail Tax 2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_99",
+				"name": "Sale Date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_100",
+				"name": "Sale Odometer",
 				"type": "String"
 			},
 			{
-				"name": "Prop_101",
+				"name": "Source",
 				"type": "String"
 			},
 			{
-				"name": "Prop_102",
+				"name": "Status (New Business, Cancellation, Upgrade, Adjustment)",
 				"type": "String"
 			},
 			{
-				"name": "Prop_103",
+				"name": "Stock Number",
 				"type": "String"
 			},
 			{
-				"name": "Prop_104",
+				"name": "Submitted Amount",
 				"type": "String"
 			},
 			{
-				"name": "Prop_105",
+				"name": "Term Mileage",
 				"type": "String"
 			},
 			{
-				"name": "Prop_106",
+				"name": "Term Month",
 				"type": "String"
 			},
 			{
-				"name": "Prop_107",
+				"name": "Term Months/Term Distance",
 				"type": "String"
 			},
 			{
-				"name": "Prop_108",
+				"name": "Tier",
 				"type": "String"
 			},
 			{
-				"name": "Prop_109",
+				"name": "Total Admin",
 				"type": "String"
 			},
 			{
-				"name": "Prop_110",
+				"name": "Total Commission",
 				"type": "String"
 			},
 			{
-				"name": "Prop_111",
+				"name": "Total Dealer Remit Taxes",
 				"type": "String"
 			},
 			{
-				"name": "Prop_112",
+				"name": "Total Options/Surcharges",
 				"type": "String"
 			},
 			{
-				"name": "Prop_113",
+				"name": "Total Payments",
 				"type": "String"
 			},
 			{
-				"name": "Prop_114",
+				"name": "Total Reserves",
 				"type": "String"
 			},
 			{
-				"name": "Prop_115",
+				"name": "Total Retail Taxes",
 				"type": "String"
 			},
 			{
-				"name": "Prop_116",
+				"name": "Vehicle Age Type",
 				"type": "String"
 			},
 			{
-				"name": "Prop_117",
+				"name": "Vehicle Class",
 				"type": "String"
 			},
 			{
-				"name": "Prop_118",
+				"name": "Vehicle Color",
 				"type": "String"
 			},
 			{
-				"name": "Prop_119",
+				"name": "Vehicle Make",
 				"type": "String"
 			},
 			{
-				"name": "Prop_120",
+				"name": "Vehicle Model",
 				"type": "String"
 			},
 			{
-				"name": "Prop_121",
+				"name": "Vehicle Nitrogen Installed",
 				"type": "String"
 			},
 			{
-				"name": "Prop_122",
+				"name": "Vehicle Purchase Price",
 				"type": "String"
 			},
 			{
-				"name": "Prop_123",
+				"name": "Vehicle Year",
 				"type": "String"
 			},
 			{
-				"name": "Prop_124",
+				"name": "VIN",
 				"type": "String"
 			},
 			{
-				"name": "Prop_125",
+				"name": "WrittenAmount.ADMIN.CHEMICAL",
 				"type": "String"
 			},
 			{
-				"name": "Prop_126",
+				"name": "WrittenAmount.ADMIN.AGENTNCB",
 				"type": "String"
 			},
 			{
-				"name": "Prop_127",
+				"name": "WrittenAmount.ADMIN.ROADSIDE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_128",
+				"name": "WrittenAmount.ADMIN.BASEADMIN",
 				"type": "String"
 			},
 			{
-				"name": "Prop_129",
+				"name": "WrittenAmount.ADMIN.NCBFEE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_130",
+				"name": "WrittenAmount.ADMIN.MARKETINGFEE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_131",
+				"name": "WrittenAmount.ADMIN.EARLY CLAIM",
 				"type": "String"
 			},
 			{
-				"name": "Prop_132",
+				"name": "WrittenAmount.COMMISSION.SPIFF",
 				"type": "String"
 			},
 			{
-				"name": "Prop_133",
+				"name": "WrittenAmount.COMMISSION.DLROVERREMIT",
 				"type": "String"
 			},
 			{
-				"name": "Prop_134",
+				"name": "WrittenAmount.COMMISSION.DEALERCOMM",
 				"type": "String"
 			},
 			{
-				"name": "Prop_135",
+				"name": "WrittenAmount.COMMISSION.CGRJVCO",
 				"type": "String"
 			},
 			{
-				"name": "Prop_136",
+				"name": "WrittenAmount.COMMISSION.MGMT FEE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_137",
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_138",
+				"name": "WrittenAmount.COMMISSION.INCENTIVE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_139",
+				"name": "WrittenAmount.COMMISSION.MGMTFEE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_140",
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM",
 				"type": "String"
 			},
 			{
-				"name": "Prop_141",
+				"name": "WrittenAmount.COMMISSION.DLRHOLDCO",
 				"type": "String"
 			},
 			{
-				"name": "Prop_142",
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM3",
 				"type": "String"
 			},
 			{
-				"name": "Prop_143",
+				"name": "WrittenAmount.COMMISSION.OWNERSCOMM",
 				"type": "String"
 			},
 			{
-				"name": "Prop_144",
+				"name": "WrittenAmount.RESERVE.CLIP",
 				"type": "String"
 			},
 			{
-				"name": "Prop_145",
+				"name": "WrittenAmount.RESERVE.SURCHARGERESERVE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_146",
+				"name": "WrittenAmount.RESERVE.BASERESERVE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_147",
+				"name": "WrittenAmount.RESERVE.WINDSHIELD RESERVE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_148",
+				"name": "CancelledAmount.ADMIN.CHEMICAL",
 				"type": "String"
 			},
 			{
-				"name": "Prop_149",
+				"name": "CancelledAmount.ADMIN.NCBFEE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_150",
+				"name": "CancelledAmount.ADMIN.AGENTNCB",
 				"type": "String"
 			},
 			{
-				"name": "Prop_151",
+				"name": "CancelledAmount.ADMIN.ROADSIDE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_152",
+				"name": "CancelledAmount.ADMIN.EARLY CLAIM",
 				"type": "String"
 			},
 			{
-				"name": "Prop_153",
+				"name": "CancelledAmount.ADMIN.BASEADMIN",
 				"type": "String"
 			},
 			{
-				"name": "Prop_154",
+				"name": "CancelledAmount.ADMIN.MARKETINGFEE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_155",
+				"name": "CancelledAmount.COMMISSION.DLROVERREMIT",
 				"type": "String"
 			},
 			{
-				"name": "Prop_156",
+				"name": "CancelledAmount.COMMISSION.MGMTFEE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_157",
+				"name": "CancelledAmount.COMMISSION.INCENTIVE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_158",
+				"name": "CancelledAmount.COMMISSION.OWNERSCOMM",
 				"type": "String"
 			},
 			{
-				"name": "Prop_159",
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM3",
 				"type": "String"
 			},
 			{
-				"name": "Prop_160",
+				"name": "CancelledAmount.COMMISSION.MGMT FEE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_161",
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_162",
+				"name": "CancelledAmount.COMMISSION.SPIFF",
 				"type": "String"
 			},
 			{
-				"name": "Prop_163",
+				"name": "CancelledAmount.COMMISSION.DEALERCOMM",
 				"type": "String"
 			},
 			{
-				"name": "Prop_164",
+				"name": "CancelledAmount.COMMISSION.CGRJVCO",
 				"type": "String"
 			},
 			{
-				"name": "Prop_165",
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM",
 				"type": "String"
 			},
 			{
-				"name": "Prop_166",
+				"name": "CancelledAmount.COMMISSION.DLRHOLDCO",
 				"type": "String"
 			},
 			{
-				"name": "Prop_167",
+				"name": "CancelledAmount.RESERVE.CLIP",
 				"type": "String"
 			},
 			{
-				"name": "Prop_168",
+				"name": "CancelledAmount.RESERVE.BASERESERVE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_169",
+				"name": "CancelledAmount.RESERVE.SURCHARGERESERVE",
 				"type": "String"
 			},
 			{
-				"name": "Prop_170",
-				"type": "String"
-			},
-			{
-				"name": "Prop_171",
+				"name": "CancelledAmount.RESERVE.WINDSHIELD RESERVE",
 				"type": "String"
 			}
 		]
