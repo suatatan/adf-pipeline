@@ -206,7 +206,7 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 derive(each(match(locate(\"Amount\", name) > 0), $$ = toDecimal($$,18,2)),",
 				"          each(match(locate(\"Fee\", name) > 0), $$ = toDecimal($$,18,2)),",
-				"          each(match(locate(\"Date\", name) > 0), $$ = toDate($$)),",
+				"          each(match(locate(\"Date\", name) > 0), $$ = toDate($$, \"YYYY-MM-DD\")),",
 				"          each(match(locate(\"Period\", name) > 0), $$ = toDate($$))) ~> SourceContractExport",
 				"SourceContractExport sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
