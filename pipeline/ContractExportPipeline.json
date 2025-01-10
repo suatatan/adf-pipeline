@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "CopyData",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -26,6 +26,12 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
+					"sink": {
+						"type": "SqlServerSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate"
+					},
 					"enableStaging": false,
 					"enableSkipIncompatibleRow": true,
 					"logSettings": {
@@ -40,8 +46,28 @@
 								"type": "LinkedServiceReference"
 							}
 						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "FlatFile",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SQLTab",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {
