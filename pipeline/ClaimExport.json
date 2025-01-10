@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyData",
+				"name": "ClaimExport-CopyData",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
