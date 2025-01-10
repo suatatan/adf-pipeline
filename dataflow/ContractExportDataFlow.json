@@ -207,9 +207,8 @@
 				"source1 derive({Amount Financed} = toDecimal({Amount Financed},18,2),",
 				"          {Activation Date} = toDate({Activation Date}),",
 				"          {Cancel Amount} = toDecimal({Amount Financed},18,2),",
-				"          {Customer Write Off Amount} = toDecimal({Customer Write Off Amount})\r",
-				",",
-				"          each(match(), ERROR_FUNCTION('') = ERROR_FUNCTION(''))) ~> SourceContractExport",
+				"          {Customer Write Off Amount} = toDecimal({Customer Write Off Amount}),",
+				"          each(match(true()), ERROR_FUNCTION('') = ERROR_FUNCTION(''))) ~> SourceContractExport",
 				"SourceContractExport sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
@@ -220,8 +219,8 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     mapColumn(",
-				"          each(match(/* All input columns */ true()),",
-				"               /* Input name */ $$ = $$)",
+				"          each(match(/* All input columns */true()),",
+				"               /* Input name */$$ = $$)",
 				"     )) ~> ClaimExportSink"
 			]
 		}
