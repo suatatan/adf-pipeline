@@ -204,7 +204,7 @@
 				"     validateSchema: false,",
 				"     limit: 20,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive({Activation Date} = toDate({Acticva}, \"YYYY-MM-DD\"),",
+				"source1 derive({Activation Date} = {Activation Date},",
 				"          {Accounting Period} = toDate({Accounting Period}, \"YYYY-MM-DD\"),",
 				"          each(match(locate(\"Amount\", name) > 0), $$ = toDecimal($$,18,2)),",
 				"          each(match(locate(\"Fee\", name) > 0), $$ = toDecimal($$,18,2))) ~> SourceContractExport",
