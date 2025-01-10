@@ -5,19 +5,11 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "MonthlyExcelFile",
-						"type": "DatasetReference"
-					},
 					"name": "sourceMonthlyExcelFile"
 				}
 			],
 			"sinks": [
 				{
-					"dataset": {
-						"referenceName": "SQLTable",
-						"type": "DatasetReference"
-					},
 					"name": "sink1"
 				}
 			],
@@ -39,8 +31,7 @@
 				"          Date as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> sourceMonthlyExcelFile",
+				"     validateSchema: false) ~> sourceMonthlyExcelFile",
 				"sourceMonthlyExcelFile select(mapColumn(",
 				"          Store,",
 				"          YrMakeModel = {Yr Make Model},",
@@ -52,23 +43,9 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> SelectRelevantColumnsAndRename",
 				"SelectRelevantColumnsAndRename derive(Sales = toInteger(Sales),",
-				"          Date = addDays(toDate('1900-01-01'), toInteger(Date) - 2)\r",
-				") ~> typeTransform",
+				"          Date = addDays(toDate('1900-01-01'), toInteger(Date) - 2)) ~> typeTransform",
 				"typeTransform sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          Store as string,",
-				"          YrMakeModel as string,",
-				"          Miles as integer,",
-				"          Customer as string,",
-				"          Sales as decimal(10,3),",
-				"          SaleDate as date",
-				"     ),",
-				"     deletable:false,",
-				"     insertable:true,",
-				"     updateable:false,",
-				"     upsertable:false,",
-				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     mapColumn(",
@@ -76,7 +53,8 @@
 				"          YrMakeModel,",
 				"          Customer,",
 				"          Sales",
-				"     )) ~> sink1"
+				"     ),",
+				"     format: 'table') ~> sink1"
 			]
 		}
 	}
