@@ -207,7 +207,7 @@
 				"source1 derive(each(match(locate(\"Amount\", name) > 0), $$ = toDecimal($$,18,2)),",
 				"          each(match(locate(\"Fee\", name) > 0), $$ = toDecimal($$,18,2)),",
 				"          {Accounting Period} = toDate({Accounting Period}, \"YYYY-MM-DD\"),",
-				"          {} = ERROR_FUNCTION('')) ~> SourceContractExport",
+				"          {Billing Date} = toDate({Billing Date})) ~> SourceContractExport",
 				"SourceContractExport sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
