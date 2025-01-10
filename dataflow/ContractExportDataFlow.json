@@ -24,9 +24,6 @@
 			"transformations": [
 				{
 					"name": "SourceContractExport"
-				},
-				{
-					"name": "cast1"
 				}
 			],
 			"scriptLines": [
@@ -207,14 +204,10 @@
 				"     validateSchema: false,",
 				"     limit: 20,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"cast1 derive(each(match(locate(\"Amount\", name) > 0), $$ = toDecimal($$,18,2)),",
+				"source1 derive(each(match(locate(\"Amount\", name) > 0), $$ = toDecimal($$,18,2)),",
 				"          each(match(locate(\"Fee\", name) > 0), $$ = toDecimal($$,18,2)),",
 				"          {Accounting Period} = toDate({Accounting Period}, \"YYYY-MM-DD\"),",
 				"          {Billing Date} = ERROR_FUNCTION('')) ~> SourceContractExport",
-				"source1 cast(output(",
-				"          {Activation Date} as date 'yyyy/MM/dd'",
-				"     ),",
-				"     errors: true) ~> cast1",
 				"SourceContractExport sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
