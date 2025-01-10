@@ -209,7 +209,7 @@
 				"          {Cancel Amount} = toDecimal({Amount Financed},18,2),",
 				"          {Customer Write Off Amount} = toDecimal({Customer Write Off Amount})\r",
 				",",
-				"          each(match(), ERROR_FUNCTION('') = ERROR_FUNCTION(''))) ~> SourceContractExport",
+				"          each(match(ERROR_FUNCTION('name.contains([\"Amount\",\"amount\"])')), ERROR_FUNCTION('') = ERROR_FUNCTION(''))) ~> SourceContractExport",
 				"SourceContractExport sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
