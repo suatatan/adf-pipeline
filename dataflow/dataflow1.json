@@ -1,0 +1,52 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"folder": {
+			"name": "ProductDataFlow"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "date_file_contract_export",
+						"type": "DatasetReference"
+					},
+					"name": "soblob"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "decoblob"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          {Accounting Period} as string,",
+				"          {Activation Date} as string,",
+				"          {Amount Financed} as string,",
+				"          APR as string,",
+				"          {Balloon Amount} as string,",
+				"          {Billing Date} as string,",
+				"          {Cancel Amount} as string,",
+				"          {Cancel Amount (w/out Tax)} as string,",
+				"          {Cancel Bill Date} as string,",
+				"          {Cancel Factor %} as string,",
+				"          {Cancellation Effective Date} as string,",
+				"          {Cancellation Fee} as string,",
+				"          {Customer Write Off Amount} as string,",
+				"          {Customer Zip Code} as string,",
+				"          {Effective Date} as string,",
+				"          {Expiration Date} as string,",
+				"          {Retail Cost} as string,",
+				"          {Sale Date} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> soblob",
+				"soblob derive(each(match(name == \"Amount\"), $$ = toDecimal($$, 10, 2))) ~> decoblob"
+			]
+		}
+	}
+}
