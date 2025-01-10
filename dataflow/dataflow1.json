@@ -198,7 +198,7 @@
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 derive({Amount Financed} = toDecimal({Amount Financed},18,2),",
 				"          {Activation Date} = toDate({Activation Date}),",
-				"          column1 = ERROR_FUNCTION('')) ~> SourceContractExport"
+				"          {Cancel Amount} = toDecimal({Amount Financed},18,2)) ~> SourceContractExport"
 			]
 		}
 	}
