@@ -196,7 +196,8 @@
 				"     validateSchema: false,",
 				"     limit: 20,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive({Amount Financed} = toDecimal({Amount Financed},18,2)) ~> SourceContractExport"
+				"source1 derive({Amount Financed} = toDecimal({Amount Financed},18,2),",
+				"          {Activation Date} = toDate({Activation Date})) ~> SourceContractExport"
 			]
 		}
 	}
