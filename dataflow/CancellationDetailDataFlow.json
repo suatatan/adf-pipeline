@@ -98,7 +98,7 @@
 				"          VIN as string,",
 				"          Year as string",
 				"     ),",
-				"     allowSchemaDrift: true,",
+				"     allowSchemaDrift: false,",
 				"     validateSchema: false,",
 				"     limit: 20,",
 				"     ignoreNoFilesFound: false) ~> source1",
