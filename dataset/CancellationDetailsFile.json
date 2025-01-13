@@ -1,0 +1,304 @@
+{
+	"name": "CancellationDetailsFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Product/PCRS-PCMI/CancellationDetails"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ClaimExport.csv",
+				"folderPath": "simulation/PPM Reports",
+				"container": "mycontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Claim Number",
+				"type": "String"
+			},
+			{
+				"name": "Contract Number",
+				"type": "String"
+			},
+			{
+				"name": "Activity",
+				"type": "String"
+			},
+			{
+				"name": "Agent Name",
+				"type": "String"
+			},
+			{
+				"name": "Agent Number",
+				"type": "String"
+			},
+			{
+				"name": "Alternate Name",
+				"type": "String"
+			},
+			{
+				"name": "Check Number",
+				"type": "String"
+			},
+			{
+				"name": "Claim Description",
+				"type": "String"
+			},
+			{
+				"name": "Claim Detail Status",
+				"type": "String"
+			},
+			{
+				"name": "Claim Mileage",
+				"type": "String"
+			},
+			{
+				"name": "Claim Status",
+				"type": "String"
+			},
+			{
+				"name": "Coverage Code",
+				"type": "String"
+			},
+			{
+				"name": "Coverage Name",
+				"type": "String"
+			},
+			{
+				"name": "Created By",
+				"type": "String"
+			},
+			{
+				"name": "Customer Address 1",
+				"type": "String"
+			},
+			{
+				"name": "Customer Address 2",
+				"type": "String"
+			},
+			{
+				"name": "Customer City",
+				"type": "String"
+			},
+			{
+				"name": "Customer Country",
+				"type": "String"
+			},
+			{
+				"name": "Customer Email",
+				"type": "String"
+			},
+			{
+				"name": "Customer First Name",
+				"type": "String"
+			},
+			{
+				"name": "Customer Last name",
+				"type": "String"
+			},
+			{
+				"name": "Customer Phone",
+				"type": "String"
+			},
+			{
+				"name": "Customer State",
+				"type": "String"
+			},
+			{
+				"name": "Customer Zip",
+				"type": "String"
+			},
+			{
+				"name": "Claim Date Claim is Reported",
+				"type": "String"
+			},
+			{
+				"name": "Date Paid",
+				"type": "String"
+			},
+			{
+				"name": "Insurer",
+				"type": "String"
+			},
+			{
+				"name": "Labor Cost",
+				"type": "String"
+			},
+			{
+				"name": "Labor Tax 1",
+				"type": "String"
+			},
+			{
+				"name": "Labor Tax 2",
+				"type": "String"
+			},
+			{
+				"name": "Loss Cause Code",
+				"type": "String"
+			},
+			{
+				"name": "Loss Code",
+				"type": "String"
+			},
+			{
+				"name": "Loss Code Description",
+				"type": "String"
+			},
+			{
+				"name": "Make",
+				"type": "String"
+			},
+			{
+				"name": "Part Tax 1",
+				"type": "String"
+			},
+			{
+				"name": "Part Tax 2",
+				"type": "String"
+			},
+			{
+				"name": "Parts Cost",
+				"type": "String"
+			},
+			{
+				"name": "Pay Method",
+				"type": "String"
+			},
+			{
+				"name": "Payee Name",
+				"type": "String"
+			},
+			{
+				"name": "Payee Type",
+				"type": "String"
+			},
+			{
+				"name": "Payment Method",
+				"type": "String"
+			},
+			{
+				"name": "Repair Completion Date",
+				"type": "String"
+			},
+			{
+				"name": "RO Number",
+				"type": "String"
+			},
+			{
+				"name": "sActivityCode",
+				"type": "String"
+			},
+			{
+				"name": "Sale Date",
+				"type": "String"
+			},
+			{
+				"name": "Sale Odom",
+				"type": "String"
+			},
+			{
+				"name": "Selling Dealer Address",
+				"type": "String"
+			},
+			{
+				"name": "Selling Dealer City",
+				"type": "String"
+			},
+			{
+				"name": "Selling Dealer Name",
+				"type": "String"
+			},
+			{
+				"name": "Selling Dealer Number",
+				"type": "String"
+			},
+			{
+				"name": "Selling Dealer State",
+				"type": "String"
+			},
+			{
+				"name": "Selling Dealer Zip",
+				"type": "String"
+			},
+			{
+				"name": "Servicer Address",
+				"type": "String"
+			},
+			{
+				"name": "Servicer City",
+				"type": "String"
+			},
+			{
+				"name": "Servicer Email",
+				"type": "String"
+			},
+			{
+				"name": "Servicer Name",
+				"type": "String"
+			},
+			{
+				"name": "Servicer Number",
+				"type": "String"
+			},
+			{
+				"name": "Servicer Phone",
+				"type": "String"
+			},
+			{
+				"name": "Servicer State",
+				"type": "String"
+			},
+			{
+				"name": "Servicer Zip",
+				"type": "String"
+			},
+			{
+				"name": "Term Month",
+				"type": "String"
+			},
+			{
+				"name": "Total Labor Tax",
+				"type": "String"
+			},
+			{
+				"name": "Total Paid Amount",
+				"type": "String"
+			},
+			{
+				"name": "Total Part Tax",
+				"type": "String"
+			},
+			{
+				"name": "TPA Code",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Age Type",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Model",
+				"type": "String"
+			},
+			{
+				"name": "VIN",
+				"type": "String"
+			},
+			{
+				"name": "Year",
+				"type": "String"
+			}
+		]
+	}
+}

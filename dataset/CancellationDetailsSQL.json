@@ -1,0 +1,19 @@
+{
+	"name": "CancellationDetailsSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Product/PCRS-PCMI/CancellationDetails"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ClaimExport"
+		}
+	}
+}
