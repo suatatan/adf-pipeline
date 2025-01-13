@@ -106,7 +106,7 @@
 				"          each(match(locate(\"Fee\",name)>0), $$ = toDecimal($$,18,2)),",
 				"          each(match(locate(\"Tax\",name)>0), $$ = toDecimal($$,18,2)),",
 				"          each(match(locate(\"Cost\",name)>0), $$ = toDecimal($$,18,2)),",
-				"          each(match(locate(\"Date\",name)>0), $$ = toDate({$$}, \"YYYY-MM-DD\"))) ~> SourceCancellationDetails",
+				"          each(match(locate(\"Date\",name)>0), $$ = toDate($$, \"YYYY-MM-DD\"))) ~> SourceCancellationDetails",
 				"SourceCancellationDetails sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
