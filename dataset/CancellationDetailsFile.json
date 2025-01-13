@@ -13,8 +13,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "ClaimExport.csv",
-				"folderPath": "simulation/PPM Reports",
+				"fileName": "EXCL Cancellation Details Nov 2024.csv",
+				"folderPath": "simulation/Underwriting Report",
 				"container": "mycontainer"
 			},
 			"columnDelimiter": ",",
