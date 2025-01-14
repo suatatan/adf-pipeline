@@ -9,7 +9,7 @@
 						"referenceName": "CancellationDetailsFile",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "CancellationDetailsFileTable"
 				}
 			],
 			"sinks": [
@@ -46,10 +46,8 @@
 				"     allowSchemaDrift: false,",
 				"     validateSchema: false,",
 				"     limit: 20,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive(each(match(locate(\"Fee\",name)>0), $$ = toDecimal($$,18,2)),",
-				"          each(match(locate(\"Tax\",name)>0), $$ = toDecimal($$,18,2)),",
-				"          each(match(locate(\"Cost\",name)>0), $$ = toDecimal($$,18,2)),",
+				"     ignoreNoFilesFound: false) ~> CancellationDetailsFileTable",
+				"CancellationDetailsFileTable derive(each(match(locate(\"Cost\",name)>0), $$ = toDecimal($$,18,2)),",
 				"          each(match(locate(\"Date\",name)>0), $$ = toDate($$, \"YYYY-MM-DD\"))) ~> SourceCancellationDetails",
 				"SourceCancellationDetails sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
