@@ -1,0 +1,89 @@
+{
+	"name": "techstory_v_1SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "baseitemid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "hostitemid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "lastupdatedbynumber",
+				"type": "nvarchar"
+			},
+			{
+				"name": "linecode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ronumber",
+				"type": "nvarchar"
+			},
+			{
+				"name": "seqno",
+				"type": "nvarchar"
+			},
+			{
+				"name": "statuscode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "storytext",
+				"type": "nvarchar"
+			},
+			{
+				"name": "updatedate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "updatetime",
+				"type": "nvarchar"
+			},
+			{
+				"name": "vehid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "cora_acct_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "rowlastupdated",
+				"type": "nvarchar"
+			},
+			{
+				"name": "rowlastupdatedutc",
+				"type": "nvarchar"
+			},
+			{
+				"name": "join_cora_acct_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "cora_acct_code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "de_server_ip_addr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "server_ip_addr",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "cdk_techstory"
+		}
+	}
+}

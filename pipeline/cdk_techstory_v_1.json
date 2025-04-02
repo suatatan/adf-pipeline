@@ -26,11 +26,22 @@
 							"type": "JsonReadSettings"
 						}
 					},
+					"sink": {
+						"type": "SqlServerSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "techstory_v_1_json",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "techstory_v_1SQL",
 						"type": "DatasetReference"
 					}
 				]
