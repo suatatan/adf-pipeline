@@ -1,0 +1,77 @@
+{
+	"name": "techstory_v_1_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "techstory_v_1.json",
+				"container": "cdk-external-sandbox"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"baseitemid": {
+					"type": "string"
+				},
+				"hostitemid": {
+					"type": "string"
+				},
+				"lastupdatedbynumber": {
+					"type": "string"
+				},
+				"linecode": {
+					"type": "string"
+				},
+				"ronumber": {
+					"type": "string"
+				},
+				"seqno": {
+					"type": "string"
+				},
+				"statuscode": {
+					"type": "string"
+				},
+				"storytext": {
+					"type": "string"
+				},
+				"updatedate": {
+					"type": "string"
+				},
+				"updatetime": {
+					"type": "string"
+				},
+				"vehid": {
+					"type": "string"
+				},
+				"cora_acct_id": {
+					"type": "string"
+				},
+				"rowlastupdated": {
+					"type": "string"
+				},
+				"rowlastupdatedutc": {
+					"type": "string"
+				},
+				"join_cora_acct_id": {
+					"type": "string"
+				},
+				"cora_acct_code": {
+					"type": "string"
+				},
+				"de_server_ip_addr": {
+					"type": "string"
+				},
+				"server_ip_addr": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
