@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "opcodes_v_1.csv",
+				"fileName": "opcodes_v_1.json",
 				"container": "cdk-external-sandbox"
 			},
 			"columnDelimiter": ",",
