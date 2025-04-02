@@ -1,0 +1,53 @@
+{
+	"name": "opcodes_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "opcodes_v_1.json",
+				"container": "cdk-external-sandbox"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"%opcodes_v": {
+					"type": "string"
+				},
+				"hostitemid": {
+					"type": "string"
+				},
+				"cora_acct_id": {
+					"type": "string"
+				},
+				"rowlastupdated": {
+					"type": "string"
+				},
+				"rowlastupdatedutc": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"join_cora_acct_id": {
+					"type": "string"
+				},
+				"cora_acct_code": {
+					"type": "string"
+				},
+				"de_server_ip_addr": {
+					"type": "string"
+				},
+				"server_ip_addr": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
