@@ -1,0 +1,120 @@
+{
+	"name": "romlsdiscountinfoclosed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "romlsdiscountinfoclosed_v_1.csv",
+				"container": "cdk-external-sandbox"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "closedsrcitemid",
+				"type": "String"
+			},
+			{
+				"name": "custnbr",
+				"type": "String"
+			},
+			{
+				"name": "discamtlabor",
+				"type": "String"
+			},
+			{
+				"name": "discamtpts",
+				"type": "String"
+			},
+			{
+				"name": "disccode",
+				"type": "String"
+			},
+			{
+				"name": "discglacctlabor",
+				"type": "String"
+			},
+			{
+				"name": "discglacctpts",
+				"type": "String"
+			},
+			{
+				"name": "disctarcolabor",
+				"type": "String"
+			},
+			{
+				"name": "disctarcopts",
+				"type": "String"
+			},
+			{
+				"name": "hostitemid",
+				"type": "String"
+			},
+			{
+				"name": "laborops",
+				"type": "String"
+			},
+			{
+				"name": "logonacct",
+				"type": "String"
+			},
+			{
+				"name": "opensrcitemid",
+				"type": "String"
+			},
+			{
+				"name": "rointdate",
+				"type": "String"
+			},
+			{
+				"name": "romlsid",
+				"type": "String"
+			},
+			{
+				"name": "ronumber",
+				"type": "String"
+			},
+			{
+				"name": "vehid",
+				"type": "String"
+			},
+			{
+				"name": "cora_acct_id",
+				"type": "String"
+			},
+			{
+				"name": "rowlastupdated",
+				"type": "String"
+			},
+			{
+				"name": "rowlastupdatedutc",
+				"type": "String"
+			},
+			{
+				"name": "join_cora_acct_id",
+				"type": "String"
+			},
+			{
+				"name": "cora_acct_code",
+				"type": "String"
+			},
+			{
+				"name": "de_server_ip_addr",
+				"type": "String"
+			},
+			{
+				"name": "server_ip_addr",
+				"type": "String"
+			}
+		]
+	}
+}
