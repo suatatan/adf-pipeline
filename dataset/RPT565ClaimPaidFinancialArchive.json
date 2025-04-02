@@ -1,0 +1,716 @@
+{
+	"name": "RPT565ClaimPaidFinancialArchive",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV_Archives"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat('RPT565ClaimPaidFinancial_', formatDateTime(utcNow(), 'yyyyMMdd_HHmmss'), '.csv')",
+					"type": "Expression"
+				},
+				"folderPath": "Underwriting Report/RPT565ClaimPaidFinancial",
+				"container": "datafiles-archive"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Accounting Period",
+				"type": "String"
+			},
+			{
+				"name": "Activation Date",
+				"type": "String"
+			},
+			{
+				"name": "Agent",
+				"type": "String"
+			},
+			{
+				"name": "Alternate Name",
+				"type": "String"
+			},
+			{
+				"name": "Amount Financed",
+				"type": "String"
+			},
+			{
+				"name": "APR",
+				"type": "String"
+			},
+			{
+				"name": "Balloon Amount",
+				"type": "String"
+			},
+			{
+				"name": "Billing Date",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Amount",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Amount (w/out Tax)",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Bill Date",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Factor %",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Method",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Reason",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Report Date",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation Effective Date",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation Fee",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation Miles",
+				"type": "String"
+			},
+			{
+				"name": "Check Date",
+				"type": "String"
+			},
+			{
+				"name": "Check Number",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer Address 1",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer Address 2",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer City",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer Country",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer Email",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer First Name",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer Last Name",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer Phone Number",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer Secondary Phone Number",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer State",
+				"type": "String"
+			},
+			{
+				"name": "Co-Buyer Zip Code",
+				"type": "String"
+			},
+			{
+				"name": "Contract #",
+				"type": "String"
+			},
+			{
+				"name": "Contract Payment Batch Number",
+				"type": "String"
+			},
+			{
+				"name": "Contract Status",
+				"type": "String"
+			},
+			{
+				"name": "Coverage Code",
+				"type": "String"
+			},
+			{
+				"name": "Coverage Name",
+				"type": "String"
+			},
+			{
+				"name": "Created By User",
+				"type": "String"
+			},
+			{
+				"name": "Culture",
+				"type": "String"
+			},
+			{
+				"name": "Currency",
+				"type": "String"
+			},
+			{
+				"name": "Customer Address 1",
+				"type": "String"
+			},
+			{
+				"name": "Customer Address 2",
+				"type": "String"
+			},
+			{
+				"name": "Customer City",
+				"type": "String"
+			},
+			{
+				"name": "Customer Country",
+				"type": "String"
+			},
+			{
+				"name": "Customer Email",
+				"type": "String"
+			},
+			{
+				"name": "Customer First Name",
+				"type": "String"
+			},
+			{
+				"name": "Customer Last Name",
+				"type": "String"
+			},
+			{
+				"name": "Customer Phone Number",
+				"type": "String"
+			},
+			{
+				"name": "Customer Secondary Phone",
+				"type": "String"
+			},
+			{
+				"name": "Customer State",
+				"type": "String"
+			},
+			{
+				"name": "Customer Write Off Amount",
+				"type": "String"
+			},
+			{
+				"name": "Customer Zip Code",
+				"type": "String"
+			},
+			{
+				"name": "Deal Number",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Address 1",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Address 2",
+				"type": "String"
+			},
+			{
+				"name": "Dealer City",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Country",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Name",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Number",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Remit tax 1",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Remit tax 2",
+				"type": "String"
+			},
+			{
+				"name": "Dealer State/Province",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Zip Code",
+				"type": "String"
+			},
+			{
+				"name": "Deductible Amount",
+				"type": "String"
+			},
+			{
+				"name": "Effective Date",
+				"type": "String"
+			},
+			{
+				"name": "Effective Odometer",
+				"type": "String"
+			},
+			{
+				"name": "Entry Date",
+				"type": "String"
+			},
+			{
+				"name": "Expiration Date",
+				"type": "String"
+			},
+			{
+				"name": "Expiration Odometer",
+				"type": "String"
+			},
+			{
+				"name": "F&I Manager EID",
+				"type": "String"
+			},
+			{
+				"name": "F&I Manager Licence #",
+				"type": "String"
+			},
+			{
+				"name": "F&I Manager Name",
+				"type": "String"
+			},
+			{
+				"name": "F&I Markup",
+				"type": "String"
+			},
+			{
+				"name": "Finance Type",
+				"type": "String"
+			},
+			{
+				"name": "Finance/Lease Term",
+				"type": "String"
+			},
+			{
+				"name": "First Payment Date",
+				"type": "String"
+			},
+			{
+				"name": "In-Service Date",
+				"type": "String"
+			},
+			{
+				"name": "Insurance Company",
+				"type": "String"
+			},
+			{
+				"name": "Insurance Company Code",
+				"type": "String"
+			},
+			{
+				"name": "Invoice",
+				"type": "String"
+			},
+			{
+				"name": "Lender",
+				"type": "String"
+			},
+			{
+				"name": "Monthly Payment",
+				"type": "String"
+			},
+			{
+				"name": "MSRP/NADA",
+				"type": "String"
+			},
+			{
+				"name": "Net Cost",
+				"type": "String"
+			},
+			{
+				"name": "Paid Claim Deduction",
+				"type": "String"
+			},
+			{
+				"name": "Pay Method",
+				"type": "String"
+			},
+			{
+				"name": "Payee Type",
+				"type": "String"
+			},
+			{
+				"name": "Payment Frequency",
+				"type": "String"
+			},
+			{
+				"name": "Product Type",
+				"type": "String"
+			},
+			{
+				"name": "Reason",
+				"type": "String"
+			},
+			{
+				"name": "Ref. Number",
+				"type": "String"
+			},
+			{
+				"name": "Refund From Dealer",
+				"type": "String"
+			},
+			{
+				"name": "Refund From TPA",
+				"type": "String"
+			},
+			{
+				"name": "Register Ref #",
+				"type": "String"
+			},
+			{
+				"name": "Remittance Number",
+				"type": "String"
+			},
+			{
+				"name": "Report Group",
+				"type": "String"
+			},
+			{
+				"name": "Retail Cost",
+				"type": "String"
+			},
+			{
+				"name": "Retail Refund Base",
+				"type": "String"
+			},
+			{
+				"name": "Retail Tax 1",
+				"type": "String"
+			},
+			{
+				"name": "Retail Tax 2",
+				"type": "String"
+			},
+			{
+				"name": "Sale Date",
+				"type": "String"
+			},
+			{
+				"name": "Sale Odometer",
+				"type": "String"
+			},
+			{
+				"name": "Source",
+				"type": "String"
+			},
+			{
+				"name": "Status (New Business, Cancellation, Upgrade, Adjustment)",
+				"type": "String"
+			},
+			{
+				"name": "Stock Number",
+				"type": "String"
+			},
+			{
+				"name": "Submitted Amount",
+				"type": "String"
+			},
+			{
+				"name": "Term Mileage",
+				"type": "String"
+			},
+			{
+				"name": "Term Month",
+				"type": "String"
+			},
+			{
+				"name": "Term Months/Term Distance",
+				"type": "String"
+			},
+			{
+				"name": "Tier",
+				"type": "String"
+			},
+			{
+				"name": "Total Admin",
+				"type": "String"
+			},
+			{
+				"name": "Total Commission",
+				"type": "String"
+			},
+			{
+				"name": "Total Dealer Remit Taxes",
+				"type": "String"
+			},
+			{
+				"name": "Total Options/Surcharges",
+				"type": "String"
+			},
+			{
+				"name": "Total Payments",
+				"type": "String"
+			},
+			{
+				"name": "Total Reserves",
+				"type": "String"
+			},
+			{
+				"name": "Total Retail Taxes",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Age Type",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Class",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Color",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Make",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Model",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Nitrogen Installed",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Purchase Price",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle Year",
+				"type": "String"
+			},
+			{
+				"name": "VIN",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.CHEMICAL",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.AGENTNCB",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.ROADSIDE",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.BASEADMIN",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.NCBFEE",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.MARKETINGFEE",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.EARLY CLAIM",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.SPIFF",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.DLROVERREMIT",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.DEALERCOMM",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.CGRJVCO",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.MGMT FEE",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM2",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.INCENTIVE",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.MGMTFEE",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.DLRHOLDCO",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM3",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.OWNERSCOMM",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.RESERVE.CLIP",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.RESERVE.SURCHARGERESERVE",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.RESERVE.BASERESERVE",
+				"type": "String"
+			},
+			{
+				"name": "WrittenAmount.RESERVE.WINDSHIELD RESERVE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.CHEMICAL",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.NCBFEE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.AGENTNCB",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.ROADSIDE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.EARLY CLAIM",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.BASEADMIN",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.MARKETINGFEE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.DLROVERREMIT",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.MGMTFEE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.INCENTIVE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.OWNERSCOMM",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM3",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.MGMT FEE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM2",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.SPIFF",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.DEALERCOMM",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.CGRJVCO",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.DLRHOLDCO",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.RESERVE.CLIP",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.RESERVE.BASERESERVE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.RESERVE.SURCHARGERESERVE",
+				"type": "String"
+			},
+			{
+				"name": "CancelledAmount.RESERVE.WINDSHIELD RESERVE",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,94 @@
+{
+	"name": "TWSClaimsDataDataFlow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "TWSClaimsData",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "TWSClaimsDataSQL",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          {Claim #} as string,",
+				"          {RO #} as string,",
+				"          Status as string,",
+				"          {Contract Number} as string,",
+				"          {Assigned To} as string,",
+				"          {Created Source} as string,",
+				"          {RO Date} as string,",
+				"          {Service Odom} as string,",
+				"          {Entry Date} as string,",
+				"          Vehicle as string,",
+				"          {First Name} as string,",
+				"          {Last Name} as string,",
+				"          VIN as string,",
+				"          Lender as string,",
+				"          {Default Servicer} as string,",
+				"          {Servicer Phone} as string,",
+				"          {Selling Dealer} as string,",
+				"          Coverage as string,",
+				"          {Paid Amount} as string,",
+				"          Activity as string",
+				"     ),",
+				"     allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(each(match(1==1), $$ = replace(trim($$), '$', ''))) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     input(",
+				"          {Claim #} as string,",
+				"          {RO #} as string,",
+				"          Status as string,",
+				"          {Contract Number} as string,",
+				"          {Assigned To} as string,",
+				"          {Created Source} as string,",
+				"          {RO Date} as date,",
+				"          {Service Odom} as decimal(18,2),",
+				"          {Entry Date} as date,",
+				"          Vehicle as string,",
+				"          {First Name} as string,",
+				"          {Last Name} as string,",
+				"          VIN as string,",
+				"          Lender as string,",
+				"          {Default Servicer} as string,",
+				"          {Servicer Phone} as string,",
+				"          {Selling Dealer} as string,",
+				"          Coverage as string,",
+				"          {Paid Amount} as decimal(18,2),",
+				"          Activity as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          each(match(/* All input columns */true()),",
+				"               /* Input name */$$ = $$)",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

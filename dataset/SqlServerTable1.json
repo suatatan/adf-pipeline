@@ -1,0 +1,223 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "hostitemid",
+				"type": "varchar"
+			},
+			{
+				"name": "cora_acct_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "rowlastupdated",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "rowlastupdatedutc",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "bin1",
+				"type": "varchar"
+			},
+			{
+				"name": "class",
+				"type": "varchar"
+			},
+			{
+				"name": "comp",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "coresale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "cost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "description",
+				"type": "varchar"
+			},
+			{
+				"name": "employee",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "kitindicator",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "labortype",
+				"type": "varchar"
+			},
+			{
+				"name": "linecode",
+				"type": "varchar"
+			},
+			{
+				"name": "list",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "lopseqno",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "mcdpartspercentage",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "misccost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "miscsale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "outsidesalesman",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "partnumber",
+				"type": "varchar"
+			},
+			{
+				"name": "partscomplinecode",
+				"type": "varchar"
+			},
+			{
+				"name": "partscoreaccount",
+				"type": "varchar"
+			},
+			{
+				"name": "partscorecost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "partsextendedcost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "partsextendedsale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "partssaleaccount",
+				"type": "varchar"
+			},
+			{
+				"name": "partssalecompany",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "partssalejournal",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "pickitemid",
+				"type": "varchar"
+			},
+			{
+				"name": "quantityordered",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "quantitysold",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "referno",
+				"type": "varchar"
+			},
+			{
+				"name": "saleprice",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "source",
+				"type": "varchar"
+			},
+			{
+				"name": "specstatus",
+				"type": "varchar"
+			},
+			{
+				"name": "unitservicecharge",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "vehid",
+				"type": "varchar"
+			},
+			{
+				"name": "join_cora_acct_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "cora_acct_code",
+				"type": "varchar"
+			},
+			{
+				"name": "de_server_ip_addr",
+				"type": "varchar"
+			},
+			{
+				"name": "server_ip_addr",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "cdk_servicesalespartsclosed_v_1"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

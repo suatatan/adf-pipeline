@@ -1,13 +1,39 @@
 {
-	"name": "ClaimExport",
+	"name": "RPT565ClaimPaidFinancial",
 	"properties": {
 		"activities": [
+			{
+				"name": "RPT565ClaimPaidFinancialDataFlow",
+				"type": "ExecuteDataFlow",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "RPT565ClaimPaidFinancialSQLDataFlow",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
 			{
 				"name": "Archive Original File",
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "ClaimExportDataFlow",
+						"activity": "RPT565ClaimPaidFinancialDataFlow",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -56,13 +82,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ClaimExport",
+						"referenceName": "RPT565ClaimPaidFinancial",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ClaimExportArchive",
+						"referenceName": "RPT565ClaimPaidFinancialArchive",
 						"type": "DatasetReference"
 					}
 				]
@@ -88,7 +114,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ClaimExport",
+						"referenceName": "RPT565ClaimPaidFinancial",
 						"type": "DatasetReference"
 					},
 					"logStorageSettings": {
@@ -103,30 +129,6 @@
 						"recursive": true,
 						"enablePartitionDiscovery": false
 					}
-				}
-			},
-			{
-				"name": "ClaimExportDataFlow",
-				"type": "ExecuteDataFlow",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"dataflow": {
-						"referenceName": "ClaimExportDataFlow",
-						"type": "DataFlowReference"
-					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
-					},
-					"traceLevel": "Fine"
 				}
 			}
 		],

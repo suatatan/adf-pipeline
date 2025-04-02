@@ -1,0 +1,245 @@
+{
+	"name": "QlikSenseDealDetails",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "QlikSenseDealDetails.csv",
+				"folderPath": "Underwriting Report",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Store",
+				"type": "String"
+			},
+			{
+				"name": "Deal No",
+				"type": "String"
+			},
+			{
+				"name": "Deal Type",
+				"type": "String"
+			},
+			{
+				"name": "Sale Type",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Bank",
+				"type": "String"
+			},
+			{
+				"name": "Stock No",
+				"type": "String"
+			},
+			{
+				"name": "Yr Make Model",
+				"type": "String"
+			},
+			{
+				"name": "Miles",
+				"type": "String"
+			},
+			{
+				"name": "Customer",
+				"type": "String"
+			},
+			{
+				"name": "Sales ()",
+				"type": "String"
+			},
+			{
+				"name": "Financed Amount ()",
+				"type": "String"
+			},
+			{
+				"name": "RSV $ ()",
+				"type": "String"
+			},
+			{
+				"name": "VSC # ()",
+				"type": "String"
+			},
+			{
+				"name": "VSC % ()",
+				"type": "String"
+			},
+			{
+				"name": "VSC $ ()",
+				"type": "String"
+			},
+			{
+				"name": "VSC $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "PPM # ()",
+				"type": "String"
+			},
+			{
+				"name": "PPM % ()",
+				"type": "String"
+			},
+			{
+				"name": "PPM $ ()",
+				"type": "String"
+			},
+			{
+				"name": "PPM $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "GAP # ()",
+				"type": "String"
+			},
+			{
+				"name": "GAP $ ()",
+				"type": "String"
+			},
+			{
+				"name": "GAP % ()",
+				"type": "String"
+			},
+			{
+				"name": "GAP $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "APPEAR # ()",
+				"type": "String"
+			},
+			{
+				"name": "APPEAR $ ()",
+				"type": "String"
+			},
+			{
+				"name": "APPEAR % ()",
+				"type": "String"
+			},
+			{
+				"name": "APPEAR $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "KEY # ()",
+				"type": "String"
+			},
+			{
+				"name": "KEY % ()",
+				"type": "String"
+			},
+			{
+				"name": "KEY $ ()",
+				"type": "String"
+			},
+			{
+				"name": "KEY $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "RHT # ()",
+				"type": "String"
+			},
+			{
+				"name": "RHT % ()",
+				"type": "String"
+			},
+			{
+				"name": "RHT $ ()",
+				"type": "String"
+			},
+			{
+				"name": "RHT $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "DENT # ()",
+				"type": "String"
+			},
+			{
+				"name": "DENT % ()",
+				"type": "String"
+			},
+			{
+				"name": "DENT $ ()",
+				"type": "String"
+			},
+			{
+				"name": "DENT $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "KAHU/LOJACK # ()",
+				"type": "String"
+			},
+			{
+				"name": "KAHU/LOJACK % ()",
+				"type": "String"
+			},
+			{
+				"name": "KAHU/LOJACK $ ()",
+				"type": "String"
+			},
+			{
+				"name": "KAHU/LOJACK $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "AFTERMARKET # ()",
+				"type": "String"
+			},
+			{
+				"name": "AFTERMARKET $ ()",
+				"type": "String"
+			},
+			{
+				"name": "AFTERMARKET % ()",
+				"type": "String"
+			},
+			{
+				"name": "AFTERMARKET $ PP ()",
+				"type": "String"
+			},
+			{
+				"name": "F&I $ ()",
+				"type": "String"
+			},
+			{
+				"name": "Back Gross $",
+				"type": "String"
+			},
+			{
+				"name": "Avg Term ()",
+				"type": "String"
+			},
+			{
+				"name": "Avg Payment ()",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

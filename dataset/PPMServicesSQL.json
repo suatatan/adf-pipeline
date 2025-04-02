@@ -1,5 +1,5 @@
 {
-	"name": "ClaimExportSQL",
+	"name": "PPMServicesSQL",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",
@@ -319,7 +319,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "ClaimExport"
+			"table": "PPM Services"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

@@ -1,0 +1,353 @@
+{
+	"name": "servicesalesdetailsclosed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "servicesalesdetailsclosed_v_1.csv",
+				"container": "cdk-external-sandbox"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "cora_acct_id",
+				"type": "String"
+			},
+			{
+				"name": "hostitemid",
+				"type": "String"
+			},
+			{
+				"name": "actualhours",
+				"type": "String"
+			},
+			{
+				"name": "addonflag",
+				"type": "String"
+			},
+			{
+				"name": "authorizationcode",
+				"type": "String"
+			},
+			{
+				"name": "bookeddate",
+				"type": "String"
+			},
+			{
+				"name": "bookedtime",
+				"type": "String"
+			},
+			{
+				"name": "bookerno",
+				"type": "String"
+			},
+			{
+				"name": "campaigncode",
+				"type": "String"
+			},
+			{
+				"name": "causes",
+				"type": "String"
+			},
+			{
+				"name": "cc_prompton_cp",
+				"type": "String"
+			},
+			{
+				"name": "cc_prompton_ip",
+				"type": "String"
+			},
+			{
+				"name": "cc_prompton_wp",
+				"type": "String"
+			},
+			{
+				"name": "claimtype",
+				"type": "String"
+			},
+			{
+				"name": "comeback",
+				"type": "String"
+			},
+			{
+				"name": "comebackro",
+				"type": "String"
+			},
+			{
+				"name": "comebacksa",
+				"type": "String"
+			},
+			{
+				"name": "comebacktech",
+				"type": "String"
+			},
+			{
+				"name": "complaintcode",
+				"type": "String"
+			},
+			{
+				"name": "concerncode",
+				"type": "String"
+			},
+			{
+				"name": "concerncodelabel",
+				"type": "String"
+			},
+			{
+				"name": "concerncodelabelabbr",
+				"type": "String"
+			},
+			{
+				"name": "concerndescription",
+				"type": "String"
+			},
+			{
+				"name": "conditioncode",
+				"type": "String"
+			},
+			{
+				"name": "dispatchactualduration",
+				"type": "String"
+			},
+			{
+				"name": "dispatchcode",
+				"type": "String"
+			},
+			{
+				"name": "dispatchestimatedduration",
+				"type": "String"
+			},
+			{
+				"name": "dispatchlinecode",
+				"type": "String"
+			},
+			{
+				"name": "dispatchlinestatus",
+				"type": "String"
+			},
+			{
+				"name": "failedpart",
+				"type": "String"
+			},
+			{
+				"name": "failedpartcount",
+				"type": "String"
+			},
+			{
+				"name": "failurecode",
+				"type": "String"
+			},
+			{
+				"name": "laborcost",
+				"type": "String"
+			},
+			{
+				"name": "labordebitaccount",
+				"type": "String"
+			},
+			{
+				"name": "labordebitcompany",
+				"type": "String"
+			},
+			{
+				"name": "labordebitcontrol",
+				"type": "String"
+			},
+			{
+				"name": "laborjournal",
+				"type": "String"
+			},
+			{
+				"name": "laborjournalcompany",
+				"type": "String"
+			},
+			{
+				"name": "laborsale",
+				"type": "String"
+			},
+			{
+				"name": "laborsaleaccount",
+				"type": "String"
+			},
+			{
+				"name": "laborsalecompany",
+				"type": "String"
+			},
+			{
+				"name": "laborsalecontrol",
+				"type": "String"
+			},
+			{
+				"name": "labortype",
+				"type": "String"
+			},
+			{
+				"name": "linecode",
+				"type": "String"
+			},
+			{
+				"name": "linoriginappl",
+				"type": "String"
+			},
+			{
+				"name": "linorigincode",
+				"type": "String"
+			},
+			{
+				"name": "loporiginappl",
+				"type": "String"
+			},
+			{
+				"name": "loporigincode",
+				"type": "String"
+			},
+			{
+				"name": "lopseqno",
+				"type": "String"
+			},
+			{
+				"name": "make",
+				"type": "String"
+			},
+			{
+				"name": "mcdlaborpercentage",
+				"type": "String"
+			},
+			{
+				"name": "misccost",
+				"type": "String"
+			},
+			{
+				"name": "miscsale",
+				"type": "String"
+			},
+			{
+				"name": "opcode",
+				"type": "String"
+			},
+			{
+				"name": "opcodedescription",
+				"type": "String"
+			},
+			{
+				"name": "originappl",
+				"type": "String"
+			},
+			{
+				"name": "origincode",
+				"type": "String"
+			},
+			{
+				"name": "otherhours",
+				"type": "String"
+			},
+			{
+				"name": "partscost",
+				"type": "String"
+			},
+			{
+				"name": "partsflag",
+				"type": "String"
+			},
+			{
+				"name": "partssale",
+				"type": "String"
+			},
+			{
+				"name": "pickitemid",
+				"type": "String"
+			},
+			{
+				"name": "ronumber",
+				"type": "String"
+			},
+			{
+				"name": "servicerequest",
+				"type": "String"
+			},
+			{
+				"name": "servicewriter",
+				"type": "String"
+			},
+			{
+				"name": "soldhours",
+				"type": "String"
+			},
+			{
+				"name": "storyseqnumber",
+				"type": "String"
+			},
+			{
+				"name": "techno",
+				"type": "String"
+			},
+			{
+				"name": "techno2",
+				"type": "String"
+			},
+			{
+				"name": "techno3",
+				"type": "String"
+			},
+			{
+				"name": "techno4",
+				"type": "String"
+			},
+			{
+				"name": "techno5",
+				"type": "String"
+			},
+			{
+				"name": "technos",
+				"type": "String"
+			},
+			{
+				"name": "timecardhours",
+				"type": "String"
+			},
+			{
+				"name": "vehid",
+				"type": "String"
+			},
+			{
+				"name": "rowlastupdated",
+				"type": "String"
+			},
+			{
+				"name": "rowlastupdatedutc",
+				"type": "String"
+			},
+			{
+				"name": "lopdiscseqnos",
+				"type": "String"
+			},
+			{
+				"name": "join_cora_acct_id",
+				"type": "String"
+			},
+			{
+				"name": "cora_acct_code",
+				"type": "String"
+			},
+			{
+				"name": "de_server_ip_addr",
+				"type": "String"
+			},
+			{
+				"name": "server_ip_addr",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,5 +1,5 @@
 {
-	"name": "ClaimExportSQL",
+	"name": "CancellationDetailSQL",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",
@@ -319,7 +319,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "ClaimExport"
+			"table": "CancellationDetails"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

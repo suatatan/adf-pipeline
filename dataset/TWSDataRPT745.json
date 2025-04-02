@@ -1,0 +1,149 @@
+{
+	"name": "TWSDataRPT745",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "TWSDataRPT745.csv",
+				"folderPath": "Underwriting Report",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DealerNumber",
+				"type": "String"
+			},
+			{
+				"name": "DealerName",
+				"type": "String"
+			},
+			{
+				"name": "Transaction_Type",
+				"type": "String"
+			},
+			{
+				"name": "Product_Description",
+				"type": "String"
+			},
+			{
+				"name": "CoverageCode",
+				"type": "String"
+			},
+			{
+				"name": "CoverageDesc",
+				"type": "String"
+			},
+			{
+				"name": "ContractNumber",
+				"type": "String"
+			},
+			{
+				"name": "Source_Origination",
+				"type": "String"
+			},
+			{
+				"name": "Billed_Date",
+				"type": "String"
+			},
+			{
+				"name": "EntryDate",
+				"type": "String"
+			},
+			{
+				"name": "SaleDate",
+				"type": "String"
+			},
+			{
+				"name": "CancelDate",
+				"type": "String"
+			},
+			{
+				"name": "CancelReasonDesc",
+				"type": "String"
+			},
+			{
+				"name": "ContractCancelledBilled",
+				"type": "String"
+			},
+			{
+				"name": "VIN",
+				"type": "String"
+			},
+			{
+				"name": "Accounting_Month",
+				"type": "String"
+			},
+			{
+				"name": "Accounting_Year",
+				"type": "String"
+			},
+			{
+				"name": "SaleOdomoter",
+				"type": "String"
+			},
+			{
+				"name": "CustFirstName",
+				"type": "String"
+			},
+			{
+				"name": "CustLastName",
+				"type": "String"
+			},
+			{
+				"name": "ContractTermMonth",
+				"type": "String"
+			},
+			{
+				"name": "ContractTermMiles",
+				"type": "String"
+			},
+			{
+				"name": "RetailRate",
+				"type": "String"
+			},
+			{
+				"name": "DealerCostRefund",
+				"type": "String"
+			},
+			{
+				"name": "Cancel_Factor",
+				"type": "String"
+			},
+			{
+				"name": "Cancel_Fee",
+				"type": "String"
+			},
+			{
+				"name": "Dealer_Commission",
+				"type": "String"
+			},
+			{
+				"name": "CancelRetailRate",
+				"type": "String"
+			},
+			{
+				"name": "Deductible",
+				"type": "String"
+			},
+			{
+				"name": "Make",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

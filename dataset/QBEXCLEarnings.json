@@ -1,0 +1,545 @@
+{
+	"name": "QBEXCLEarnings",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "QBEXCLEarnings.csv",
+				"folderPath": "PPM Reports",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "TPA Code",
+				"type": "String"
+			},
+			{
+				"name": "Contract Id",
+				"type": "String"
+			},
+			{
+				"name": "Accounting Month",
+				"type": "String"
+			},
+			{
+				"name": "Insurer Code",
+				"type": "String"
+			},
+			{
+				"name": "Product Type Code",
+				"type": "String"
+			},
+			{
+				"name": "Agent Number",
+				"type": "String"
+			},
+			{
+				"name": "Agent Name",
+				"type": "String"
+			},
+			{
+				"name": "Seller Type",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Number",
+				"type": "String"
+			},
+			{
+				"name": "Dealer Name",
+				"type": "String"
+			},
+			{
+				"name": "Stock Number",
+				"type": "String"
+			},
+			{
+				"name": "Contract Number",
+				"type": "String"
+			},
+			{
+				"name": "Contract Status",
+				"type": "String"
+			},
+			{
+				"name": "Term Months",
+				"type": "String"
+			},
+			{
+				"name": "Term Miles",
+				"type": "String"
+			},
+			{
+				"name": "Sale Odometer",
+				"type": "String"
+			},
+			{
+				"name": "Sale Date",
+				"type": "String"
+			},
+			{
+				"name": "Effective Date",
+				"type": "String"
+			},
+			{
+				"name": "Expiration Date",
+				"type": "String"
+			},
+			{
+				"name": "Activation Date",
+				"type": "String"
+			},
+			{
+				"name": "Activated Year-Month",
+				"type": "String"
+			},
+			{
+				"name": "Billed Date",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation Date",
+				"type": "String"
+			},
+			{
+				"name": "Coverage Code",
+				"type": "String"
+			},
+			{
+				"name": "Coverage Description",
+				"type": "String"
+			},
+			{
+				"name": "Coverage Group Code",
+				"type": "String"
+			},
+			{
+				"name": "Report Group Code",
+				"type": "String"
+			},
+			{
+				"name": "Written NET Amount",
+				"type": "String"
+			},
+			{
+				"name": "Cancel NET Amount",
+				"type": "String"
+			},
+			{
+				"name": "NET Contract Amount",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Fee Amount",
+				"type": "String"
+			},
+			{
+				"name": "Paid Claim Deduction",
+				"type": "String"
+			},
+			{
+				"name": "Retail Amount",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Retail Amount",
+				"type": "String"
+			},
+			{
+				"name": "NET Retail Amount",
+				"type": "String"
+			},
+			{
+				"name": "Retail Refund Amount",
+				"type": "String"
+			},
+			{
+				"name": "Earning Date",
+				"type": "String"
+			},
+			{
+				"name": "Earning Curve 1 Id",
+				"type": "String"
+			},
+			{
+				"name": "Earning Curve Name 1",
+				"type": "String"
+			},
+			{
+				"name": "Earning Factor Current 1",
+				"type": "String"
+			},
+			{
+				"name": "Earning Factor Cumulative 1",
+				"type": "String"
+			},
+			{
+				"name": "Admin Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Admin Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "NET Admin Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "Admin Earned Current 1",
+				"type": "String"
+			},
+			{
+				"name": "Admin Earned Cumulative 1",
+				"type": "String"
+			},
+			{
+				"name": "Admin Unearned 1",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Reserve Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "NET Reserve Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Earned Current 1",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Earned Cumulative 1",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Unearned 1",
+				"type": "String"
+			},
+			{
+				"name": "Commission Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Commission Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "NET Commission Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "Commission Earned Current 1",
+				"type": "String"
+			},
+			{
+				"name": "Commission Earned Cumulative 1",
+				"type": "String"
+			},
+			{
+				"name": "Commission Unearned 1",
+				"type": "String"
+			},
+			{
+				"name": "NET Contract Amount 1",
+				"type": "String"
+			},
+			{
+				"name": "NET Earned Current 1",
+				"type": "String"
+			},
+			{
+				"name": "NET Earned Cumulative 1",
+				"type": "String"
+			},
+			{
+				"name": "NET Unearned 1",
+				"type": "String"
+			},
+			{
+				"name": "NET RetailAmount 1",
+				"type": "String"
+			},
+			{
+				"name": "Retail Earned Current 1",
+				"type": "String"
+			},
+			{
+				"name": "Retail Earned Cumulative 1",
+				"type": "String"
+			},
+			{
+				"name": "Retail Unearned 1",
+				"type": "String"
+			},
+			{
+				"name": "Earning Curve 2 Id",
+				"type": "String"
+			},
+			{
+				"name": "Earning Curve Name 2",
+				"type": "String"
+			},
+			{
+				"name": "Earning Factor Current 2",
+				"type": "String"
+			},
+			{
+				"name": "Earning Factor Cumulative 2",
+				"type": "String"
+			},
+			{
+				"name": "Admin Amount 2",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Admin Amount 2",
+				"type": "String"
+			},
+			{
+				"name": "NET Admin Amount 2",
+				"type": "String"
+			},
+			{
+				"name": "Admin Earned Current 2",
+				"type": "String"
+			},
+			{
+				"name": "Admin Earned Cumulative 2",
+				"type": "String"
+			},
+			{
+				"name": "Admin Unearned 2",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Amount 2",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Reserve Amount2",
+				"type": "String"
+			},
+			{
+				"name": "NET Reserve Amount 2",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Earned Current 2",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Earned Cumulative 2",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Unearned 2",
+				"type": "String"
+			},
+			{
+				"name": "Commission Amount2",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Commission Amount 2",
+				"type": "String"
+			},
+			{
+				"name": "NET Commission Amount 2",
+				"type": "String"
+			},
+			{
+				"name": "Commission Earned Current 2",
+				"type": "String"
+			},
+			{
+				"name": "Commission Earned Cumulative 2",
+				"type": "String"
+			},
+			{
+				"name": "Commission Unearned 2",
+				"type": "String"
+			},
+			{
+				"name": "NET Contract Amount 2",
+				"type": "String"
+			},
+			{
+				"name": "NET Earned Current 2",
+				"type": "String"
+			},
+			{
+				"name": "NET Earned Cumulative 2",
+				"type": "String"
+			},
+			{
+				"name": "NET Unearned 2",
+				"type": "String"
+			},
+			{
+				"name": "NET RetailAmount 2",
+				"type": "String"
+			},
+			{
+				"name": "Retail Earned Current 2",
+				"type": "String"
+			},
+			{
+				"name": "Retail Earned Cumulative 2",
+				"type": "String"
+			},
+			{
+				"name": "Retail Unearned 2",
+				"type": "String"
+			},
+			{
+				"name": "Earning Curve 3 Id",
+				"type": "String"
+			},
+			{
+				"name": "Earning Curve Name 3",
+				"type": "String"
+			},
+			{
+				"name": "Earning Factor Current 3",
+				"type": "String"
+			},
+			{
+				"name": "Earning Factor Cumulative 3",
+				"type": "String"
+			},
+			{
+				"name": "Admin Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Admin Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "NET Admin Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "Admin Earned Current 3",
+				"type": "String"
+			},
+			{
+				"name": "Admin Earned Cumulative 3",
+				"type": "String"
+			},
+			{
+				"name": "Admin Unearned 3",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Reserve Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "NET Reserve Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Earned Current 3",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Earned Cumulative 3",
+				"type": "String"
+			},
+			{
+				"name": "Reserve Unearned 3",
+				"type": "String"
+			},
+			{
+				"name": "Commission Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "Cancel Commission Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "NET Commission Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "Commission Earned Current 3",
+				"type": "String"
+			},
+			{
+				"name": "Commission Earned Cumulative 3",
+				"type": "String"
+			},
+			{
+				"name": "Commission Unearned 3",
+				"type": "String"
+			},
+			{
+				"name": "NET Contract Amount 3",
+				"type": "String"
+			},
+			{
+				"name": "NET Earned Current 3",
+				"type": "String"
+			},
+			{
+				"name": "NET Earned Cumulative 3",
+				"type": "String"
+			},
+			{
+				"name": "NET Unearned 3",
+				"type": "String"
+			},
+			{
+				"name": "NET RetailAmount 3",
+				"type": "String"
+			},
+			{
+				"name": "Retail Earned Current 3",
+				"type": "String"
+			},
+			{
+				"name": "Retail Earned Cumulative 3",
+				"type": "String"
+			},
+			{
+				"name": "Retail Unearned 3",
+				"type": "String"
+			},
+			{
+				"name": "Data Source",
+				"type": "String"
+			},
+			{
+				"name": "Extract Data/Time",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

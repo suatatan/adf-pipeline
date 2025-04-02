@@ -1,0 +1,124 @@
+{
+	"name": "RPT740ContractIncomeDataFlow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "RPT740ContractIncome",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "RPT740ContractIncomeSQL",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          ActionCode1 as string,",
+				"          ContractNumber1 as string,",
+				"          GroupCode1 as string,",
+				"          CoverageCode as string,",
+				"          CoverageDesc1 as string,",
+				"          SaleDate2 as string,",
+				"          EntryDate as string,",
+				"          BilledDate2 as string,",
+				"          RegisterDate as string,",
+				"          CancelDate as string,",
+				"          CancelEffectDate as string,",
+				"          ContractCancelledBilled as string,",
+				"          VinNumber as string,",
+				"          DealerNumber as string,",
+				"          DealerState1 as string,",
+				"          SumOfAdmin as string,",
+				"          SumOfReserves as string,",
+				"          SumOfCommission as string,",
+				"          NetRate as string,",
+				"          OverRemit as string,",
+				"          NoChargeBackAdj as string,",
+				"          DealerRemit as string,",
+				"          SaleTax as string,",
+				"          Cancelfee as string,",
+				"          NetRefund as string,",
+				"          DealerRemitRefund as string,",
+				"          RetailRate as string,",
+				"          CancelRetailRateNoClaimDeduct as string,",
+				"          RefundCheck as string,",
+				"          NsdOsdCharge as string,",
+				"          DealerCost as string,",
+				"          DealerCostRefund as string,",
+				"          PaidClaimDeduct as string,",
+				"          NetDealerBilling as string,",
+				"          TerminateMoreThan90DaysFlag as string",
+				"     ),",
+				"     allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(each(match(1==1), $$ = replace(trim($$), '$', ''))) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     input(",
+				"          ActionCode1 as string,",
+				"          ContractNumber1 as string,",
+				"          GroupCode1 as string,",
+				"          CoverageCode as string,",
+				"          CoverageDesc1 as string,",
+				"          SaleDate2 as date,",
+				"          EntryDate as date,",
+				"          BilledDate2 as date,",
+				"          RegisterDate as date,",
+				"          CancelDate as date,",
+				"          CancelEffectDate as date,",
+				"          ContractCancelledBilled as decimal(18,2),",
+				"          VinNumber as string,",
+				"          DealerNumber as string,",
+				"          DealerState1 as string,",
+				"          SumOfAdmin as decimal(18,2),",
+				"          SumOfReserves as decimal(18,2),",
+				"          SumOfCommission as decimal(18,2),",
+				"          NetRate as decimal(18,2),",
+				"          OverRemit as decimal(18,2),",
+				"          NoChargeBackAdj as decimal(18,2),",
+				"          DealerRemit as decimal(18,2),",
+				"          SaleTax as decimal(18,2),",
+				"          Cancelfee as decimal(18,2),",
+				"          NetRefund as decimal(18,2),",
+				"          DealerRemitRefund as decimal(18,2),",
+				"          RetailRate as decimal(18,2),",
+				"          CancelRetailRateNoClaimDeduct as decimal(18,2),",
+				"          RefundCheck as decimal(18,2),",
+				"          NsdOsdCharge as decimal(18,2),",
+				"          DealerCost as decimal(18,2),",
+				"          DealerCostRefund as decimal(18,2),",
+				"          PaidClaimDeduct as decimal(18,2),",
+				"          NetDealerBilling as decimal(18,2),",
+				"          TerminateMoreThan90DaysFlag as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          each(match(/* All input columns */true()),",
+				"               /* Input name */$$ = $$)",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

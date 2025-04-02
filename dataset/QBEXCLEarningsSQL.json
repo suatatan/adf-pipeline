@@ -1,5 +1,5 @@
 {
-	"name": "QBSQL",
+	"name": "QBEXCLEarningsSQL",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",
@@ -17,9 +17,7 @@
 			},
 			{
 				"name": "Contract Id",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "varchar"
 			},
 			{
 				"name": "Accounting Month",
@@ -724,7 +722,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "QB"
+			"table": "QBEXCLEarnings"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

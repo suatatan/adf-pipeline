@@ -1,0 +1,1277 @@
+{
+	"name": "servicesalesclosed_v_1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "servicesalesclosed_v_1.csv",
+				"container": "cdk-external-sandbox"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "cora_acct_id",
+				"type": "String"
+			},
+			{
+				"name": "hostitemid",
+				"type": "String"
+			},
+			{
+				"name": "accountingaccount",
+				"type": "String"
+			},
+			{
+				"name": "actualhours",
+				"type": "String"
+			},
+			{
+				"name": "actualhourscustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "actualhoursinternal",
+				"type": "String"
+			},
+			{
+				"name": "actualhourswarranty",
+				"type": "String"
+			},
+			{
+				"name": "address",
+				"type": "String"
+			},
+			{
+				"name": "apptdate",
+				"type": "String"
+			},
+			{
+				"name": "apptflag",
+				"type": "String"
+			},
+			{
+				"name": "apptids",
+				"type": "String"
+			},
+			{
+				"name": "appttime",
+				"type": "String"
+			},
+			{
+				"name": "blockivr",
+				"type": "String"
+			},
+			{
+				"name": "bookeddate",
+				"type": "String"
+			},
+			{
+				"name": "bookedtime",
+				"type": "String"
+			},
+			{
+				"name": "cashierno",
+				"type": "String"
+			},
+			{
+				"name": "citystatezip",
+				"type": "String"
+			},
+			{
+				"name": "closedate",
+				"type": "String"
+			},
+			{
+				"name": "color",
+				"type": "String"
+			},
+			{
+				"name": "comebackflag",
+				"type": "String"
+			},
+			{
+				"name": "contactemailaddress",
+				"type": "String"
+			},
+			{
+				"name": "contactphonenumber",
+				"type": "String"
+			},
+			{
+				"name": "corecost",
+				"type": "String"
+			},
+			{
+				"name": "coresale",
+				"type": "String"
+			},
+			{
+				"name": "custno",
+				"type": "String"
+			},
+			{
+				"name": "damagereportcompleted",
+				"type": "String"
+			},
+			{
+				"name": "damagereportid",
+				"type": "String"
+			},
+			{
+				"name": "damagerptemail",
+				"type": "String"
+			},
+			{
+				"name": "debitlocaltaxcontrolnumcp",
+				"type": "String"
+			},
+			{
+				"name": "debitlocaltaxcontrolnumip",
+				"type": "String"
+			},
+			{
+				"name": "debitlocaltaxcontrolnumwp",
+				"type": "String"
+			},
+			{
+				"name": "debitstatetaxcontrolnumcp",
+				"type": "String"
+			},
+			{
+				"name": "debitstatetaxcontrolnumip",
+				"type": "String"
+			},
+			{
+				"name": "debitstatetaxcontrolnumwp",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp2taxcontrolnumcp",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp2taxcontrolnumip",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp2taxcontrolnumwp",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp3taxcontrolnumcp",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp3taxcontrolnumip",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp3taxcontrolnumwp",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp4taxcontrolnumcp",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp4taxcontrolnumip",
+				"type": "String"
+			},
+			{
+				"name": "debitsupp4taxcontrolnumwp",
+				"type": "String"
+			},
+			{
+				"name": "deductible",
+				"type": "String"
+			},
+			{
+				"name": "deletepiidata",
+				"type": "String"
+			},
+			{
+				"name": "deliverydate",
+				"type": "String"
+			},
+			{
+				"name": "engineno",
+				"type": "String"
+			},
+			{
+				"name": "estcompletiondate",
+				"type": "String"
+			},
+			{
+				"name": "estcompletiontime",
+				"type": "String"
+			},
+			{
+				"name": "finalbooker",
+				"type": "String"
+			},
+			{
+				"name": "hascustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "hasdamagereport",
+				"type": "String"
+			},
+			{
+				"name": "hashistory",
+				"type": "String"
+			},
+			{
+				"name": "hasip",
+				"type": "String"
+			},
+			{
+				"name": "hasvq",
+				"type": "String"
+			},
+			{
+				"name": "haswp",
+				"type": "String"
+			},
+			{
+				"name": "incompleteholddescription",
+				"type": "String"
+			},
+			{
+				"name": "ivrready",
+				"type": "String"
+			},
+			{
+				"name": "laborcost",
+				"type": "String"
+			},
+			{
+				"name": "laborcostcustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "laborcostinternal",
+				"type": "String"
+			},
+			{
+				"name": "laborcostwarranty",
+				"type": "String"
+			},
+			{
+				"name": "laborsale",
+				"type": "String"
+			},
+			{
+				"name": "laborsalecustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "laborsaleinternal",
+				"type": "String"
+			},
+			{
+				"name": "laborsalepostded",
+				"type": "String"
+			},
+			{
+				"name": "laborsalepostdedcustomer",
+				"type": "String"
+			},
+			{
+				"name": "laborsalepostdedinternal",
+				"type": "String"
+			},
+			{
+				"name": "laborsalepostdedwarranty",
+				"type": "String"
+			},
+			{
+				"name": "laborsalewarranty",
+				"type": "String"
+			},
+			{
+				"name": "lastservicedate",
+				"type": "String"
+			},
+			{
+				"name": "localdebittaxaccountcp",
+				"type": "String"
+			},
+			{
+				"name": "localdebittaxaccountip",
+				"type": "String"
+			},
+			{
+				"name": "localdebittaxaccountwp",
+				"type": "String"
+			},
+			{
+				"name": "localsalestaxaccountcp",
+				"type": "String"
+			},
+			{
+				"name": "localsalestaxaccountip",
+				"type": "String"
+			},
+			{
+				"name": "localsalestaxaccountwp",
+				"type": "String"
+			},
+			{
+				"name": "localsalestaxjournalcp",
+				"type": "String"
+			},
+			{
+				"name": "localsalestaxjournalip",
+				"type": "String"
+			},
+			{
+				"name": "localsalestaxjournalwp",
+				"type": "String"
+			},
+			{
+				"name": "localtaxamountcp",
+				"type": "String"
+			},
+			{
+				"name": "localtaxamountip",
+				"type": "String"
+			},
+			{
+				"name": "localtaxamountwp",
+				"type": "String"
+			},
+			{
+				"name": "localtaxsourcecompanycp",
+				"type": "String"
+			},
+			{
+				"name": "localtaxsourcecompanyip",
+				"type": "String"
+			},
+			{
+				"name": "localtaxsourcecompanywp",
+				"type": "String"
+			},
+			{
+				"name": "localtaxtargetcompanycp",
+				"type": "String"
+			},
+			{
+				"name": "localtaxtargetcompanyip",
+				"type": "String"
+			},
+			{
+				"name": "localtaxtargetcompanywp",
+				"type": "String"
+			},
+			{
+				"name": "lotlocation",
+				"type": "String"
+			},
+			{
+				"name": "make",
+				"type": "String"
+			},
+			{
+				"name": "mileage",
+				"type": "String"
+			},
+			{
+				"name": "mileagelastvisit",
+				"type": "String"
+			},
+			{
+				"name": "mileageout",
+				"type": "String"
+			},
+			{
+				"name": "misccost",
+				"type": "String"
+			},
+			{
+				"name": "misccostcustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "misccostinternal",
+				"type": "String"
+			},
+			{
+				"name": "misccostwarranty",
+				"type": "String"
+			},
+			{
+				"name": "miscsale",
+				"type": "String"
+			},
+			{
+				"name": "miscsalecustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "miscsaleinternal",
+				"type": "String"
+			},
+			{
+				"name": "miscsalewarranty",
+				"type": "String"
+			},
+			{
+				"name": "model",
+				"type": "String"
+			},
+			{
+				"name": "name1",
+				"type": "String"
+			},
+			{
+				"name": "name2",
+				"type": "String"
+			},
+			{
+				"name": "numberofparts",
+				"type": "String"
+			},
+			{
+				"name": "opcodecountcustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "opcodecountinternal",
+				"type": "String"
+			},
+			{
+				"name": "opcodecountwarranty",
+				"type": "String"
+			},
+			{
+				"name": "opendate",
+				"type": "String"
+			},
+			{
+				"name": "openedtime",
+				"type": "String"
+			},
+			{
+				"name": "optoutsharingpiidata",
+				"type": "String"
+			},
+			{
+				"name": "optoutsellingpiidata",
+				"type": "String"
+			},
+			{
+				"name": "originalpromisedate",
+				"type": "String"
+			},
+			{
+				"name": "originalpromisetime",
+				"type": "String"
+			},
+			{
+				"name": "originalwaiterflag",
+				"type": "String"
+			},
+			{
+				"name": "originappl",
+				"type": "String"
+			},
+			{
+				"name": "origincode",
+				"type": "String"
+			},
+			{
+				"name": "otherhours",
+				"type": "String"
+			},
+			{
+				"name": "otherhourscustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "otherhoursinternal",
+				"type": "String"
+			},
+			{
+				"name": "otherhourswarranty",
+				"type": "String"
+			},
+			{
+				"name": "partscost",
+				"type": "String"
+			},
+			{
+				"name": "partscostcustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "partscostinternal",
+				"type": "String"
+			},
+			{
+				"name": "partscostwarranty",
+				"type": "String"
+			},
+			{
+				"name": "partsholddescription",
+				"type": "String"
+			},
+			{
+				"name": "partssale",
+				"type": "String"
+			},
+			{
+				"name": "partssalecustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "partssaleinternal",
+				"type": "String"
+			},
+			{
+				"name": "partssalepostded",
+				"type": "String"
+			},
+			{
+				"name": "partssalepostdedcustomer",
+				"type": "String"
+			},
+			{
+				"name": "partssalepostdedinternal",
+				"type": "String"
+			},
+			{
+				"name": "partssalepostdedwarranty",
+				"type": "String"
+			},
+			{
+				"name": "partssalewarranty",
+				"type": "String"
+			},
+			{
+				"name": "pickitemid",
+				"type": "String"
+			},
+			{
+				"name": "posteddate",
+				"type": "String"
+			},
+			{
+				"name": "priorityflag",
+				"type": "String"
+			},
+			{
+				"name": "priorityvalue",
+				"type": "String"
+			},
+			{
+				"name": "promiseddate",
+				"type": "String"
+			},
+			{
+				"name": "promisedtime",
+				"type": "String"
+			},
+			{
+				"name": "purchaseordernumber",
+				"type": "String"
+			},
+			{
+				"name": "remarks",
+				"type": "String"
+			},
+			{
+				"name": "rental",
+				"type": "String"
+			},
+			{
+				"name": "revisedcompletiondate",
+				"type": "String"
+			},
+			{
+				"name": "revisedcompletiontime",
+				"type": "String"
+			},
+			{
+				"name": "rocomment1",
+				"type": "String"
+			},
+			{
+				"name": "rocomment2",
+				"type": "String"
+			},
+			{
+				"name": "rocomment3",
+				"type": "String"
+			},
+			{
+				"name": "rocomment4",
+				"type": "String"
+			},
+			{
+				"name": "rocomment5",
+				"type": "String"
+			},
+			{
+				"name": "rocomment6",
+				"type": "String"
+			},
+			{
+				"name": "rocomment7",
+				"type": "String"
+			},
+			{
+				"name": "rocomment8",
+				"type": "String"
+			},
+			{
+				"name": "rocomment9",
+				"type": "String"
+			},
+			{
+				"name": "roholddescription",
+				"type": "String"
+			},
+			{
+				"name": "rolubecostcp",
+				"type": "String"
+			},
+			{
+				"name": "rolubecostip",
+				"type": "String"
+			},
+			{
+				"name": "rolubecostwp",
+				"type": "String"
+			},
+			{
+				"name": "rolubesalecp",
+				"type": "String"
+			},
+			{
+				"name": "rolubesaleip",
+				"type": "String"
+			},
+			{
+				"name": "rolubesalewp",
+				"type": "String"
+			},
+			{
+				"name": "romisccostcp",
+				"type": "String"
+			},
+			{
+				"name": "romisccostip",
+				"type": "String"
+			},
+			{
+				"name": "romisccostwp",
+				"type": "String"
+			},
+			{
+				"name": "romiscsalecp",
+				"type": "String"
+			},
+			{
+				"name": "romiscsaleip",
+				"type": "String"
+			},
+			{
+				"name": "romiscsalewp",
+				"type": "String"
+			},
+			{
+				"name": "ronumber",
+				"type": "String"
+			},
+			{
+				"name": "rooverestimate",
+				"type": "String"
+			},
+			{
+				"name": "rosalecp",
+				"type": "String"
+			},
+			{
+				"name": "rosaleip",
+				"type": "String"
+			},
+			{
+				"name": "rosalewp",
+				"type": "String"
+			},
+			{
+				"name": "rostatuscode",
+				"type": "String"
+			},
+			{
+				"name": "rostatuscodedesc",
+				"type": "String"
+			},
+			{
+				"name": "rosubletsalecp",
+				"type": "String"
+			},
+			{
+				"name": "rosubletsaleip",
+				"type": "String"
+			},
+			{
+				"name": "rosubletsalewp",
+				"type": "String"
+			},
+			{
+				"name": "rosubletcostcp",
+				"type": "String"
+			},
+			{
+				"name": "rosubletcostip",
+				"type": "String"
+			},
+			{
+				"name": "rosubletcostwp",
+				"type": "String"
+			},
+			{
+				"name": "rototalestimate",
+				"type": "String"
+			},
+			{
+				"name": "service",
+				"type": "String"
+			},
+			{
+				"name": "serviceadvisor",
+				"type": "String"
+			},
+			{
+				"name": "serviceadvisordepartment",
+				"type": "String"
+			},
+			{
+				"name": "serviceadvisorteam",
+				"type": "String"
+			},
+			{
+				"name": "shopchargecostcustomer",
+				"type": "String"
+			},
+			{
+				"name": "shopchargecostinternal",
+				"type": "String"
+			},
+			{
+				"name": "shopchargecostwarranty",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitaccountcp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitaccountip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitaccountwp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitcompanycp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitcompanyip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitcompanywp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitcontrolcp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitcontrolip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargedebitcontrolwp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargejournalcp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargejournalip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargejournalwp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesaleaccountcp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesaleaccountip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesaleaccountwp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesaleamountcp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesaleamountip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesaleamountwp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesalecompanycp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesalecompanyip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesalecompanywp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesalecontrolcp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesalecontrolip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesalecontrolwp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesourcecompanycp",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesourcecompanyip",
+				"type": "String"
+			},
+			{
+				"name": "shopchargesourcecompanywp",
+				"type": "String"
+			},
+			{
+				"name": "shopsuppliescost",
+				"type": "String"
+			},
+			{
+				"name": "shopsuppliessales",
+				"type": "String"
+			},
+			{
+				"name": "soldbydealer",
+				"type": "String"
+			},
+			{
+				"name": "soldhours",
+				"type": "String"
+			},
+			{
+				"name": "soldhourscustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "soldhoursinternal",
+				"type": "String"
+			},
+			{
+				"name": "soldhourswarranty",
+				"type": "String"
+			},
+			{
+				"name": "sorcount",
+				"type": "String"
+			},
+			{
+				"name": "sourcefile",
+				"type": "String"
+			},
+			{
+				"name": "specialcust",
+				"type": "String"
+			},
+			{
+				"name": "sroflag",
+				"type": "String"
+			},
+			{
+				"name": "statedebittaxaccountcp",
+				"type": "String"
+			},
+			{
+				"name": "statedebittaxaccountip",
+				"type": "String"
+			},
+			{
+				"name": "statedebittaxaccountwp",
+				"type": "String"
+			},
+			{
+				"name": "statesalestaxaccountcp",
+				"type": "String"
+			},
+			{
+				"name": "statesalestaxaccountip",
+				"type": "String"
+			},
+			{
+				"name": "statesalestaxaccountwp",
+				"type": "String"
+			},
+			{
+				"name": "statesalestaxjournalcp",
+				"type": "String"
+			},
+			{
+				"name": "statesalestaxjournalip",
+				"type": "String"
+			},
+			{
+				"name": "statesalestaxjournalwp",
+				"type": "String"
+			},
+			{
+				"name": "statetaxamountcp",
+				"type": "String"
+			},
+			{
+				"name": "statetaxamountip",
+				"type": "String"
+			},
+			{
+				"name": "statetaxamountwp",
+				"type": "String"
+			},
+			{
+				"name": "statetaxsourcecompanycp",
+				"type": "String"
+			},
+			{
+				"name": "statetaxsourcecompanyip",
+				"type": "String"
+			},
+			{
+				"name": "statetaxsourcecompanywp",
+				"type": "String"
+			},
+			{
+				"name": "statetaxtargetcompanycp",
+				"type": "String"
+			},
+			{
+				"name": "statetaxtargetcompanyip",
+				"type": "String"
+			},
+			{
+				"name": "statetaxtargetcompanywp",
+				"type": "String"
+			},
+			{
+				"name": "supp2debittaxacctcp",
+				"type": "String"
+			},
+			{
+				"name": "supp2debittaxacctip",
+				"type": "String"
+			},
+			{
+				"name": "supp2debittaxacctwp",
+				"type": "String"
+			},
+			{
+				"name": "supp2salestaxacctcp",
+				"type": "String"
+			},
+			{
+				"name": "supp2salestaxacctip",
+				"type": "String"
+			},
+			{
+				"name": "supp2salestaxacctwp",
+				"type": "String"
+			},
+			{
+				"name": "supp2salestaxjournalcp",
+				"type": "String"
+			},
+			{
+				"name": "supp2salestaxjournalip",
+				"type": "String"
+			},
+			{
+				"name": "supp2salestaxjournalwp",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxamountcp",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxamountip",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxamountwp",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxsourcecocp",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxsourcecoip",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxsourcecowp",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxtargetcocp",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxtargetcoip",
+				"type": "String"
+			},
+			{
+				"name": "supp2taxtargetcowp",
+				"type": "String"
+			},
+			{
+				"name": "supp3debittaxacctcp",
+				"type": "String"
+			},
+			{
+				"name": "supp3debittaxacctip",
+				"type": "String"
+			},
+			{
+				"name": "supp3debittaxacctwp",
+				"type": "String"
+			},
+			{
+				"name": "supp3salestaxacctcp",
+				"type": "String"
+			},
+			{
+				"name": "supp3salestaxacctip",
+				"type": "String"
+			},
+			{
+				"name": "supp3salestaxacctwp",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxamountcp",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxamountip",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxamountwp",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxsourcecocp",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxsourcecoip",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxsourcecowp",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxtargetcocp",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxtargetcoip",
+				"type": "String"
+			},
+			{
+				"name": "supp3taxtargetcowp",
+				"type": "String"
+			},
+			{
+				"name": "supp4debittaxacctcp",
+				"type": "String"
+			},
+			{
+				"name": "supp4debittaxacctip",
+				"type": "String"
+			},
+			{
+				"name": "supp4debittaxacctwp",
+				"type": "String"
+			},
+			{
+				"name": "supp4salestaxacctcp",
+				"type": "String"
+			},
+			{
+				"name": "supp4salestaxacctip",
+				"type": "String"
+			},
+			{
+				"name": "supp4salestaxacctwp",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxamountcp",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxamountip",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxamountwp",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxsourcecocp",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxsourcecoip",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxsourcecowp",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxtargetcocp",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxtargetcoip",
+				"type": "String"
+			},
+			{
+				"name": "supp4taxtargetcowp",
+				"type": "String"
+			},
+			{
+				"name": "tag",
+				"type": "String"
+			},
+			{
+				"name": "timecardhours",
+				"type": "String"
+			},
+			{
+				"name": "timecardhourscustomerpay",
+				"type": "String"
+			},
+			{
+				"name": "timecardhoursinternal",
+				"type": "String"
+			},
+			{
+				"name": "timecardhourswarranty",
+				"type": "String"
+			},
+			{
+				"name": "transmissionno",
+				"type": "String"
+			},
+			{
+				"name": "transtype",
+				"type": "String"
+			},
+			{
+				"name": "vehid",
+				"type": "String"
+			},
+			{
+				"name": "vin",
+				"type": "String"
+			},
+			{
+				"name": "voiddate",
+				"type": "String"
+			},
+			{
+				"name": "waiterflag",
+				"type": "String"
+			},
+			{
+				"name": "wippartsaccount",
+				"type": "String"
+			},
+			{
+				"name": "year",
+				"type": "String"
+			},
+			{
+				"name": "rowlastupdated",
+				"type": "String"
+			},
+			{
+				"name": "rowlastupdatedutc",
+				"type": "String"
+			},
+			{
+				"name": "join_cora_acct_id",
+				"type": "String"
+			},
+			{
+				"name": "cora_acct_code",
+				"type": "String"
+			},
+			{
+				"name": "de_server_ip_addr",
+				"type": "String"
+			},
+			{
+				"name": "server_ip_addr",
+				"type": "String"
+			},
+			{
+				"name": "totalamountdue",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

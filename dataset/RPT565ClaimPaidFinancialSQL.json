@@ -1,0 +1,273 @@
+{
+	"name": "RPT565ClaimPaidFinancialSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SQL"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "DealerGroupName",
+				"type": "varchar"
+			},
+			{
+				"name": "InsurerCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Payee_Number",
+				"type": "varchar"
+			},
+			{
+				"name": "PayeeName",
+				"type": "varchar"
+			},
+			{
+				"name": "Servicer_Address2",
+				"type": "varchar"
+			},
+			{
+				"name": "ServiceType",
+				"type": "varchar"
+			},
+			{
+				"name": "ClaimNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "RONumber",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "VinNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "VehicleYear",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Model",
+				"type": "varchar"
+			},
+			{
+				"name": "Make",
+				"type": "varchar"
+			},
+			{
+				"name": "Transmission",
+				"type": "varchar"
+			},
+			{
+				"name": "ContractNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "CustFirstName",
+				"type": "varchar"
+			},
+			{
+				"name": "CustLastName",
+				"type": "varchar"
+			},
+			{
+				"name": "Sellernumber",
+				"type": "varchar"
+			},
+			{
+				"name": "Sellername",
+				"type": "varchar"
+			},
+			{
+				"name": "ContractBilled",
+				"type": "date"
+			},
+			{
+				"name": "ContractSale",
+				"type": "date"
+			},
+			{
+				"name": "SaleOdometer",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Term",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ReportGroup",
+				"type": "varchar"
+			},
+			{
+				"name": "CoverageDesc",
+				"type": "varchar"
+			},
+			{
+				"name": "FailurePart",
+				"type": "varchar"
+			},
+			{
+				"name": "LossCode",
+				"type": "varchar"
+			},
+			{
+				"name": "LossCodeDesc",
+				"type": "varchar"
+			},
+			{
+				"name": "AuthNumber",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "PaymentRefNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "PaymentID",
+				"type": "varchar"
+			},
+			{
+				"name": "TransactionType",
+				"type": "varchar"
+			},
+			{
+				"name": "PayMethod",
+				"type": "varchar"
+			},
+			{
+				"name": "ServiceDate",
+				"type": "date"
+			},
+			{
+				"name": "Service_Odometer",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "PaymentProcessed",
+				"type": "date"
+			},
+			{
+				"name": "UserName",
+				"type": "varchar"
+			},
+			{
+				"name": "Part_Amt",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "LaborAmt",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Part_Tax_1",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Labor_Tax_1",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Part_Tax_2",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Labor_Tax_2",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Other_Amt",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Deductible_Amt",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "PaidAmt",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Days_Since_Contract_Sale3",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Mileage_at_Claim3",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "DealNumber",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "DateOfLoss",
+				"type": "date"
+			},
+			{
+				"name": "Claim_Entry_Date",
+				"type": "date"
+			},
+			{
+				"name": "CoverageCode",
+				"type": "varchar"
+			},
+			{
+				"name": "ServicerTaxState",
+				"type": "varchar"
+			},
+			{
+				"name": "DealerTaxState",
+				"type": "varchar"
+			},
+			{
+				"name": "StockNumber",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "RPT565ClaimPaidFinancial"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

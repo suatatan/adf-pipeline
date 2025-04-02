@@ -1,0 +1,709 @@
+{
+	"name": "RPT908ContractDetails",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "RPT908ContractDetails.csv",
+				"folderPath": "Underwriting Report",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Grouping",
+				"type": "String"
+			},
+			{
+				"name": "DealerGroupName",
+				"type": "String"
+			},
+			{
+				"name": "Insurer_Code",
+				"type": "String"
+			},
+			{
+				"name": "Product_type_Code",
+				"type": "String"
+			},
+			{
+				"name": "Coverage_Code",
+				"type": "String"
+			},
+			{
+				"name": "Dealer_Number",
+				"type": "String"
+			},
+			{
+				"name": "Dealer_Name",
+				"type": "String"
+			},
+			{
+				"name": "Dealer_Insured_State",
+				"type": "String"
+			},
+			{
+				"name": "Contract_Number",
+				"type": "String"
+			},
+			{
+				"name": "Transaction_Date",
+				"type": "String"
+			},
+			{
+				"name": "Transaction_Type",
+				"type": "String"
+			},
+			{
+				"name": "Billed_Date",
+				"type": "String"
+			},
+			{
+				"name": "Contract_Sale_Date",
+				"type": "String"
+			},
+			{
+				"name": "Customer_Last_Name",
+				"type": "String"
+			},
+			{
+				"name": "Customer_First_Name",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle_Age_type",
+				"type": "String"
+			},
+			{
+				"name": "VIN",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle_Model_Year",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle_Make",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle_Model",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle_Class",
+				"type": "String"
+			},
+			{
+				"name": "Term_Months",
+				"type": "String"
+			},
+			{
+				"name": "Term_Mileage",
+				"type": "String"
+			},
+			{
+				"name": "DealerRemit",
+				"type": "String"
+			},
+			{
+				"name": "RetailRate",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation_Date",
+				"type": "String"
+			},
+			{
+				"name": "Number_of_Days_in_Force",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation_Factor",
+				"type": "String"
+			},
+			{
+				"name": "CancelFee",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation_Reason2",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation_no_charge_back_amount2",
+				"type": "String"
+			},
+			{
+				"name": "cancelDealerRemit",
+				"type": "String"
+			},
+			{
+				"name": "Cancellation_Retail_Rate",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_1_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_1_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_2_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_2_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_3_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_3_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_4_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_4_Amount",
+				"type": "String"
+			},
+			{
+				"name": "Admin_6_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_5_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_6_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_6_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_7_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_7_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_8_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_8_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_9_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_9_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_10_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_10_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_11_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_11_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_12_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_12_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_13_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_13_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_14_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_14_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_15_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_15_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_16_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_16_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_17_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_17_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_18_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_18_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_19_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_19_Amount",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_20_Label",
+				"type": "String"
+			},
+			{
+				"name": "ADMIN_20_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_1_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_1_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_2_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_2_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_3_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_3_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_4_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_4_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_5_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_5_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_6_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_6_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_7_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_7_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_8_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_8_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_9_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_9_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_10_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_10_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_11_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_11_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_12_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_12_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_13_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_13_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_14_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_14_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_15_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_15_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_16_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_16_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_17_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_17_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_18_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_18_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_19_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_19_Amount",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_20_Label",
+				"type": "String"
+			},
+			{
+				"name": "RESERVE_20_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_1_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_1_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_2_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_2_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_3_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_3_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_4_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_4_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_5_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_5_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_6_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_6_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_7_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_7_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_8_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_8_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_9_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_9_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_10_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_10_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_11_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_11_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_12_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_12_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_13_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_13_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_14_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_14_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_15_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_15_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_16_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_16_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_17_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_17_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_18_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_18_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_19_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_19_Amount",
+				"type": "String"
+			},
+			{
+				"name": "COMM_20_Label",
+				"type": "String"
+			},
+			{
+				"name": "COMM_20_Amount",
+				"type": "String"
+			},
+			{
+				"name": "Customer_CancelFee",
+				"type": "String"
+			},
+			{
+				"name": "Tax_1_Label",
+				"type": "String"
+			},
+			{
+				"name": "Tax_1_Amount",
+				"type": "String"
+			},
+			{
+				"name": "Tax_2_Label",
+				"type": "String"
+			},
+			{
+				"name": "Tax_2_Amount",
+				"type": "String"
+			},
+			{
+				"name": "PaymentType",
+				"type": "String"
+			},
+			{
+				"name": "Transaction_Details",
+				"type": "String"
+			},
+			{
+				"name": "TransactionType",
+				"type": "String"
+			},
+			{
+				"name": "Transaction_Id",
+				"type": "String"
+			},
+			{
+				"name": "DealNumber",
+				"type": "String"
+			},
+			{
+				"name": "AssociationCode",
+				"type": "String"
+			},
+			{
+				"name": "lendername",
+				"type": "String"
+			},
+			{
+				"name": "Unnamed: 165",
+				"type": "String"
+			},
+			{
+				"name": "Unnamed: 166",
+				"type": "String"
+			},
+			{
+				"name": "Unnamed: 167",
+				"type": "String"
+			},
+			{
+				"name": "Unnamed: 168",
+				"type": "String"
+			},
+			{
+				"name": "Unnamed: 169",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

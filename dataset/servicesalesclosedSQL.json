@@ -1,0 +1,17 @@
+{
+	"name": "servicesalesclosedSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "",
+			"table": "cdk_servicesalesclosed_v_1"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

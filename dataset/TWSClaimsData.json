@@ -1,0 +1,109 @@
+{
+	"name": "TWSClaimsData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "TWSClaimsData.csv",
+				"folderPath": "Underwriting Report",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Claim #",
+				"type": "String"
+			},
+			{
+				"name": "RO #",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Contract Number",
+				"type": "String"
+			},
+			{
+				"name": "Assigned To",
+				"type": "String"
+			},
+			{
+				"name": "Created Source",
+				"type": "String"
+			},
+			{
+				"name": "RO Date",
+				"type": "String"
+			},
+			{
+				"name": "Service Odom",
+				"type": "String"
+			},
+			{
+				"name": "Entry Date",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle",
+				"type": "String"
+			},
+			{
+				"name": "First Name",
+				"type": "String"
+			},
+			{
+				"name": "Last Name",
+				"type": "String"
+			},
+			{
+				"name": "VIN",
+				"type": "String"
+			},
+			{
+				"name": "Lender",
+				"type": "String"
+			},
+			{
+				"name": "Default Servicer",
+				"type": "String"
+			},
+			{
+				"name": "Servicer Phone",
+				"type": "String"
+			},
+			{
+				"name": "Selling Dealer",
+				"type": "String"
+			},
+			{
+				"name": "Coverage",
+				"type": "String"
+			},
+			{
+				"name": "Paid Amount",
+				"type": "String"
+			},
+			{
+				"name": "Activity",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

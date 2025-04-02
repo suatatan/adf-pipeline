@@ -1,0 +1,201 @@
+{
+	"name": "RPT740ContractIncomeSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SQL"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ActionCode1",
+				"type": "varchar"
+			},
+			{
+				"name": "ContractNumber1",
+				"type": "varchar"
+			},
+			{
+				"name": "GroupCode1",
+				"type": "varchar"
+			},
+			{
+				"name": "CoverageCode",
+				"type": "varchar"
+			},
+			{
+				"name": "CoverageDesc1",
+				"type": "varchar"
+			},
+			{
+				"name": "SaleDate2",
+				"type": "date"
+			},
+			{
+				"name": "EntryDate",
+				"type": "date"
+			},
+			{
+				"name": "BilledDate2",
+				"type": "date"
+			},
+			{
+				"name": "RegisterDate",
+				"type": "date"
+			},
+			{
+				"name": "CancelDate",
+				"type": "date"
+			},
+			{
+				"name": "CancelEffectDate",
+				"type": "date"
+			},
+			{
+				"name": "ContractCancelledBilled",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "VinNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "DealerNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "DealerState1",
+				"type": "varchar"
+			},
+			{
+				"name": "SumOfAdmin",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "SumOfReserves",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "SumOfCommission",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "NetRate",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "OverRemit",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "NoChargeBackAdj",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "DealerRemit",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "SaleTax",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancelfee",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "NetRefund",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "DealerRemitRefund",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RetailRate",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelRetailRateNoClaimDeduct",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RefundCheck",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "NsdOsdCharge",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "DealerCost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "DealerCostRefund",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "PaidClaimDeduct",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "NetDealerBilling",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "TerminateMoreThan90DaysFlag",
+				"type": "char"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "RPT740ContractIncome"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

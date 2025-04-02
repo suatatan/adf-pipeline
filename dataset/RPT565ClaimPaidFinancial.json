@@ -1,0 +1,245 @@
+{
+	"name": "RPT565ClaimPaidFinancial",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "RPT565ClaimPaidFinancial.csv",
+				"folderPath": "Underwriting Report",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DealerGroupName",
+				"type": "String"
+			},
+			{
+				"name": "InsurerCode",
+				"type": "String"
+			},
+			{
+				"name": "Payee_Number",
+				"type": "String"
+			},
+			{
+				"name": "PayeeName",
+				"type": "String"
+			},
+			{
+				"name": "Servicer_Address2",
+				"type": "String"
+			},
+			{
+				"name": "ServiceType",
+				"type": "String"
+			},
+			{
+				"name": "ClaimNumber",
+				"type": "String"
+			},
+			{
+				"name": "RONumber",
+				"type": "String"
+			},
+			{
+				"name": "VinNumber",
+				"type": "String"
+			},
+			{
+				"name": "VehicleYear",
+				"type": "String"
+			},
+			{
+				"name": "Model",
+				"type": "String"
+			},
+			{
+				"name": "Make",
+				"type": "String"
+			},
+			{
+				"name": "Transmission",
+				"type": "String"
+			},
+			{
+				"name": "ContractNumber",
+				"type": "String"
+			},
+			{
+				"name": "CustFirstName",
+				"type": "String"
+			},
+			{
+				"name": "CustLastName",
+				"type": "String"
+			},
+			{
+				"name": "Sellernumber",
+				"type": "String"
+			},
+			{
+				"name": "Sellername",
+				"type": "String"
+			},
+			{
+				"name": "ContractBilled",
+				"type": "String"
+			},
+			{
+				"name": "ContractSale",
+				"type": "String"
+			},
+			{
+				"name": "SaleOdometer",
+				"type": "String"
+			},
+			{
+				"name": "Term",
+				"type": "String"
+			},
+			{
+				"name": "ReportGroup",
+				"type": "String"
+			},
+			{
+				"name": "CoverageDesc",
+				"type": "String"
+			},
+			{
+				"name": "FailurePart",
+				"type": "String"
+			},
+			{
+				"name": "LossCode",
+				"type": "String"
+			},
+			{
+				"name": "LossCodeDesc",
+				"type": "String"
+			},
+			{
+				"name": "AuthNumber",
+				"type": "String"
+			},
+			{
+				"name": "PaymentRefNumber",
+				"type": "String"
+			},
+			{
+				"name": "PaymentID",
+				"type": "String"
+			},
+			{
+				"name": "TransactionType",
+				"type": "String"
+			},
+			{
+				"name": "PayMethod",
+				"type": "String"
+			},
+			{
+				"name": "ServiceDate",
+				"type": "String"
+			},
+			{
+				"name": "Service_Odometer",
+				"type": "String"
+			},
+			{
+				"name": "PaymentProcessed",
+				"type": "String"
+			},
+			{
+				"name": "UserName",
+				"type": "String"
+			},
+			{
+				"name": "Part_Amt",
+				"type": "String"
+			},
+			{
+				"name": "LaborAmt",
+				"type": "String"
+			},
+			{
+				"name": "Part_Tax_1",
+				"type": "String"
+			},
+			{
+				"name": "Labor_Tax_1",
+				"type": "String"
+			},
+			{
+				"name": "Part_Tax_2",
+				"type": "String"
+			},
+			{
+				"name": "Labor_Tax_2",
+				"type": "String"
+			},
+			{
+				"name": "Other_Amt",
+				"type": "String"
+			},
+			{
+				"name": "Deductible_Amt",
+				"type": "String"
+			},
+			{
+				"name": "PaidAmt",
+				"type": "String"
+			},
+			{
+				"name": "Days_Since_Contract_Sale3",
+				"type": "String"
+			},
+			{
+				"name": "Mileage_at_Claim3",
+				"type": "String"
+			},
+			{
+				"name": "DealNumber",
+				"type": "String"
+			},
+			{
+				"name": "DateOfLoss",
+				"type": "String"
+			},
+			{
+				"name": "Claim_Entry_Date",
+				"type": "String"
+			},
+			{
+				"name": "CoverageCode",
+				"type": "String"
+			},
+			{
+				"name": "ServicerTaxState",
+				"type": "String"
+			},
+			{
+				"name": "DealerTaxState",
+				"type": "String"
+			},
+			{
+				"name": "StockNumber",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

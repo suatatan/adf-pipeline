@@ -1,0 +1,849 @@
+{
+	"name": "RPT908ContractDetailsSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SQL"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Grouping",
+				"type": "varchar"
+			},
+			{
+				"name": "DealerGroupName",
+				"type": "varchar"
+			},
+			{
+				"name": "Insurer_Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Product_type_Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Coverage_Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Dealer_Number",
+				"type": "varchar"
+			},
+			{
+				"name": "Dealer_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Dealer_Insured_State",
+				"type": "varchar"
+			},
+			{
+				"name": "Contract_Number",
+				"type": "varchar"
+			},
+			{
+				"name": "Transaction_Date",
+				"type": "date"
+			},
+			{
+				"name": "Transaction_Type",
+				"type": "varchar"
+			},
+			{
+				"name": "Billed_Date",
+				"type": "date"
+			},
+			{
+				"name": "Contract_Sale_Date",
+				"type": "date"
+			},
+			{
+				"name": "Customer_Last_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer_First_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Vehicle_Age_type",
+				"type": "char"
+			},
+			{
+				"name": "VIN",
+				"type": "varchar"
+			},
+			{
+				"name": "Vehicle_Model_Year",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Vehicle_Make",
+				"type": "varchar"
+			},
+			{
+				"name": "Vehicle_Model",
+				"type": "varchar"
+			},
+			{
+				"name": "Vehicle_Class",
+				"type": "varchar"
+			},
+			{
+				"name": "Term_Months",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Term_Mileage",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "DealerRemit",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RetailRate",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancellation_Date",
+				"type": "date"
+			},
+			{
+				"name": "Number_of_Days_in_Force",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancellation_Factor",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelFee",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancellation_Reason2",
+				"type": "varchar"
+			},
+			{
+				"name": "Cancellation_no_charge_back_amount2",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "cancelDealerRemit",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancellation_Retail_Rate",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_1_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_1_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_2_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_2_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_3_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_3_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_4_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_4_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Admin_5_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_5_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_6_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_6_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_7_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_7_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_8_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_8_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_9_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_9_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_10_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_10_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_11_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_11_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_12_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_12_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_13_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_13_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_14_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_14_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_15_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_15_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_16_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_16_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_17_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_17_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_18_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_18_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_19_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_19_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ADMIN_20_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "ADMIN_20_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_1_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_1_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_2_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_2_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_3_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_3_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_4_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_4_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_5_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_5_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_6_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_6_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_7_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_7_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_8_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_8_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_9_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_9_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_10_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_10_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_11_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_11_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_12_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_12_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_13_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_13_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_14_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_14_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_15_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_15_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_16_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_16_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_17_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_17_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_18_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_18_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_19_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_19_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "RESERVE_20_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "RESERVE_20_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_1_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_1_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_2_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_2_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_3_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_3_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_4_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_4_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_5_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_5_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_6_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_6_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_7_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_7_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_8_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_8_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_9_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_9_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_10_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_10_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_11_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_11_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_12_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_12_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_13_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_13_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_14_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_14_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_15_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_15_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_16_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_16_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_17_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_17_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_18_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_18_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_19_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_19_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "COMM_20_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "COMM_20_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Customer_CancelFee",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Tax_1_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "Tax_1_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Tax_2_Label",
+				"type": "varchar"
+			},
+			{
+				"name": "Tax_2_Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "PaymentType",
+				"type": "varchar"
+			},
+			{
+				"name": "Transaction_Details",
+				"type": "varchar"
+			},
+			{
+				"name": "TransactionType",
+				"type": "varchar"
+			},
+			{
+				"name": "Transaction_Id",
+				"type": "varchar"
+			},
+			{
+				"name": "DealNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "AssociationCode",
+				"type": "varchar"
+			},
+			{
+				"name": "lendername",
+				"type": "varchar"
+			},
+			{
+				"name": "Unnamed: 165",
+				"type": "varchar"
+			},
+			{
+				"name": "Unnamed: 166",
+				"type": "varchar"
+			},
+			{
+				"name": "Unnamed: 167",
+				"type": "varchar"
+			},
+			{
+				"name": "Unnamed: 168",
+				"type": "varchar"
+			},
+			{
+				"name": "Unnamed: 169",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "RPT908ContractDetails"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

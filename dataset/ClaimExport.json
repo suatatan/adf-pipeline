@@ -1,326 +1,305 @@
 {
-	"name": "ClaimExportSQL",
+	"name": "ClaimExport",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "SqlServer1",
+			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "SQL"
+			"name": "CSV"
 		},
 		"annotations": [],
-		"type": "SqlServerTable",
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ClaimExport.csv",
+				"folderPath": "PPM Reports",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
 		"schema": [
 			{
 				"name": "Claim Number",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Contract Number",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Activity",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Agent Name",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Agent Number",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Alternate Name",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Check Number",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Claim Description",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Claim Detail Status",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Claim Mileage",
-				"type": "int",
-				"precision": 10
+				"type": "String"
 			},
 			{
 				"name": "Claim Status",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Coverage Code",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Coverage Name",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Created By",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Customer Address 1",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Customer Address 2",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Customer City",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Customer Country",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Customer Email",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Customer First Name",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
-				"name": "Customer Last Name",
-				"type": "varchar"
+				"name": "Customer Last name",
+				"type": "String"
 			},
 			{
 				"name": "Customer Phone",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Customer State",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Customer Zip",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Claim Date Claim is Reported",
-				"type": "date"
+				"type": "String"
 			},
 			{
 				"name": "Date Paid",
-				"type": "date"
+				"type": "String"
 			},
 			{
 				"name": "Insurer",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Labor Cost",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Labor Tax 1",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Labor Tax 2",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Loss Cause Code",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Loss Code",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Loss Code Description",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Make",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Part Tax 1",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Part Tax 2",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Parts Cost",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Pay Method",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Payee Name",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Payee Type",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Payment Method",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Repair Completion Date",
-				"type": "date"
+				"type": "String"
 			},
 			{
 				"name": "RO Number",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "sActivityCode",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Sale Date",
-				"type": "date"
+				"type": "String"
 			},
 			{
 				"name": "Sale Odom",
-				"type": "int",
-				"precision": 10
+				"type": "String"
 			},
 			{
 				"name": "Selling Dealer Address",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Selling Dealer City",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Selling Dealer Name",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Selling Dealer Number",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Selling Dealer State",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Selling Dealer Zip",
-				"type": "int",
-				"precision": 10
+				"type": "String"
 			},
 			{
 				"name": "Servicer Address",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Servicer City",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Servicer Email",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Servicer Name",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Servicer Number",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Servicer Phone",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Servicer State",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Servicer Zip",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Term Month",
-				"type": "int",
-				"precision": 10
+				"type": "String"
 			},
 			{
 				"name": "Total Labor Tax",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "Total Paid Amount",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Total Part Tax",
-				"type": "decimal",
-				"precision": 18,
-				"scale": 2
+				"type": "String"
 			},
 			{
 				"name": "TPA Code",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Vehicle Age Type",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Vehicle Model",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "VIN",
-				"type": "varchar"
+				"type": "String"
 			},
 			{
 				"name": "Year",
-				"type": "int",
-				"precision": 10
+				"type": "String"
 			}
-		],
-		"typeProperties": {
-			"schema": "dbo",
-			"table": "ClaimExport"
-		}
+		]
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }

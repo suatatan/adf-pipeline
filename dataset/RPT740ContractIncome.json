@@ -1,0 +1,169 @@
+{
+	"name": "RPT740ContractIncome",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "RPT740ContractIncome.csv",
+				"folderPath": "Underwriting Report",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ActionCode1",
+				"type": "String"
+			},
+			{
+				"name": "ContractNumber1",
+				"type": "String"
+			},
+			{
+				"name": "GroupCode1",
+				"type": "String"
+			},
+			{
+				"name": "CoverageCode",
+				"type": "String"
+			},
+			{
+				"name": "CoverageDesc1",
+				"type": "String"
+			},
+			{
+				"name": "SaleDate2",
+				"type": "String"
+			},
+			{
+				"name": "EntryDate",
+				"type": "String"
+			},
+			{
+				"name": "BilledDate2",
+				"type": "String"
+			},
+			{
+				"name": "RegisterDate",
+				"type": "String"
+			},
+			{
+				"name": "CancelDate",
+				"type": "String"
+			},
+			{
+				"name": "CancelEffectDate",
+				"type": "String"
+			},
+			{
+				"name": "ContractCancelledBilled",
+				"type": "String"
+			},
+			{
+				"name": "VinNumber",
+				"type": "String"
+			},
+			{
+				"name": "DealerNumber",
+				"type": "String"
+			},
+			{
+				"name": "DealerState1",
+				"type": "String"
+			},
+			{
+				"name": "SumOfAdmin",
+				"type": "String"
+			},
+			{
+				"name": "SumOfReserves",
+				"type": "String"
+			},
+			{
+				"name": "SumOfCommission",
+				"type": "String"
+			},
+			{
+				"name": "NetRate",
+				"type": "String"
+			},
+			{
+				"name": "OverRemit",
+				"type": "String"
+			},
+			{
+				"name": "NoChargeBackAdj",
+				"type": "String"
+			},
+			{
+				"name": "DealerRemit",
+				"type": "String"
+			},
+			{
+				"name": "SaleTax",
+				"type": "String"
+			},
+			{
+				"name": "Cancelfee",
+				"type": "String"
+			},
+			{
+				"name": "NetRefund",
+				"type": "String"
+			},
+			{
+				"name": "DealerRemitRefund",
+				"type": "String"
+			},
+			{
+				"name": "RetailRate",
+				"type": "String"
+			},
+			{
+				"name": "CancelRetailRateNoClaimDeduct",
+				"type": "String"
+			},
+			{
+				"name": "RefundCheck",
+				"type": "String"
+			},
+			{
+				"name": "NsdOsdCharge",
+				"type": "String"
+			},
+			{
+				"name": "DealerCost",
+				"type": "String"
+			},
+			{
+				"name": "DealerCostRefund",
+				"type": "String"
+			},
+			{
+				"name": "PaidClaimDeduct",
+				"type": "String"
+			},
+			{
+				"name": "NetDealerBilling",
+				"type": "String"
+			},
+			{
+				"name": "TerminateMoreThan90DaysFlag",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

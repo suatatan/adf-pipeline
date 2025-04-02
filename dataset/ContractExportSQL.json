@@ -6,14 +6,602 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "Product/PCRS-PCMI/ContractExport"
+			"name": "SQL"
 		},
 		"annotations": [],
 		"type": "SqlServerTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "Accounting Period",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Billing Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cancel Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancel Bill Date",
+				"type": "date"
+			},
+			{
+				"name": "Cancel Factor %",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancel Reason",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cancellation Fee",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancellation Miles",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Contract #",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contract Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Coverage Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Coverage Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Created By User",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Deal Number",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Dealer Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer State/Province",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Deductible Amount",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Entry Date",
+				"type": "date"
+			},
+			{
+				"name": "Expiration Date",
+				"type": "date"
+			},
+			{
+				"name": "Expiration Odometer",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "F&I Markup",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Insurance Company",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Lender",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Net Cost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Paid Claim Deduction",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Product Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Refund From TPA",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Retail Cost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Retail Refund Base",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Sale Date",
+				"type": "date"
+			},
+			{
+				"name": "Sale Odometer",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Term Mileage",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Term Month",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Vehicle Age Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Vehicle Class",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Vehicle Make",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Vehicle Model",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Vehicle Purchase Price",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Vehicle Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "VIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.CHEMICAL",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.ADMIN.ROADSIDE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.ADMIN.BASEADMIN",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.ADMIN.EARLY CLAIM",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.SPIFF",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.DEALERCOMM",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.CGRJVCO",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.MGMT FEE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM2",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.INCENTIVE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.MGMTFEE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.DLRHOLDCO",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.AGENTCOMM3",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.OWNERSCOMM",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.RESERVE.SURCHARGERESERVE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "WrittenAmount.RESERVE.BASERESERVE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.ADMIN.CHEMICAL",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.ADMIN.ROADSIDE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.ADMIN.EARLY CLAIM",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.ADMIN.BASEADMIN",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.MGMTFEE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.INCENTIVE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.OWNERSCOMM",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM3",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.MGMT FEE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM2",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.SPIFF",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.DEALERCOMM",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.CGRJVCO",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.AGENTCOMM",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.DLRHOLDCO",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.RESERVE.SURCHARGERESERVE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelledAmount.RESERVE.BASERESERVE",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Activation Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Agent",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cancel Amount (w/out Tax)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cancel Method",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cancel Report Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cancellation Effective Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer Address 1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer Address 2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer Remit tax 1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer Remit tax 2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dealer Zip Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Effective Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Effective Odometer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Insurance Company Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MSRP/NADA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Refund From Dealer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Register Ref #",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Remittance Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Retail Tax 1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Retail Tax 2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status (New Business, Cancellation, Upgrade, Adjustment)",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Stock Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Submitted Amount",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Term Months/Term Distance",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Tier",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Admin",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Commission",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Dealer Remit Taxes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Options/Surcharges",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Reserves",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total Retail Taxes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Vehicle Color",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.AGENTNCB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.NCBFEE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WrittenAmount.ADMIN.MARKETINGFEE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WrittenAmount.COMMISSION.DLROVERREMIT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WrittenAmount.RESERVE.CLIP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WrittenAmount.RESERVE.WINDSHIELD RESERVE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.NCBFEE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.AGENTNCB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CancelledAmount.ADMIN.MARKETINGFEE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CancelledAmount.COMMISSION.DLROVERREMIT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CancelledAmount.RESERVE.CLIP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CancelledAmount.RESERVE.WINDSHIELD RESERVE",
+				"type": "nvarchar"
+			}
+		],
 		"typeProperties": {
 			"schema": "dbo",
 			"table": "ContractExport"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

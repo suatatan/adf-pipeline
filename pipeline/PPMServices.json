@@ -1,13 +1,66 @@
 {
-	"name": "ClaimExport",
+	"name": "PPMServices",
 	"properties": {
 		"activities": [
 			{
-				"name": "Archive Original File",
+				"name": "PPMServicesCopyData",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "PPMServices",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "PPMServicesSQL",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "PPMServivesArchive",
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "ClaimExportDataFlow",
+						"activity": "PPMServicesCopyData",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -56,13 +109,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ClaimExport",
+						"referenceName": "PPMServicesArchive",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ClaimExportArchive",
+						"referenceName": "QBEXCLEarningsArchive",
 						"type": "DatasetReference"
 					}
 				]
@@ -72,7 +125,7 @@
 				"type": "Delete",
 				"dependsOn": [
 					{
-						"activity": "Archive Original File",
+						"activity": "PPMServivesArchive",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -88,7 +141,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ClaimExport",
+						"referenceName": "PPMServices",
 						"type": "DatasetReference"
 					},
 					"logStorageSettings": {
@@ -104,37 +157,13 @@
 						"enablePartitionDiscovery": false
 					}
 				}
-			},
-			{
-				"name": "ClaimExportDataFlow",
-				"type": "ExecuteDataFlow",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"dataflow": {
-						"referenceName": "ClaimExportDataFlow",
-						"type": "DataFlowReference"
-					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
-					},
-					"traceLevel": "Fine"
-				}
 			}
 		],
 		"folder": {
 			"name": "ExcelaPipelines"
 		},
 		"annotations": [],
-		"lastPublishTime": "2025-01-26T13:55:05Z"
+		"lastPublishTime": "2025-01-26T13:55:04Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

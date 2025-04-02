@@ -1,0 +1,165 @@
+{
+	"name": "RPT745ClientDetailsSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SQL"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "DealerNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "DealerName",
+				"type": "varchar"
+			},
+			{
+				"name": "Transaction_Type",
+				"type": "varchar"
+			},
+			{
+				"name": "Product_Description",
+				"type": "varchar"
+			},
+			{
+				"name": "CoverageCode",
+				"type": "varchar"
+			},
+			{
+				"name": "CoverageDesc",
+				"type": "varchar"
+			},
+			{
+				"name": "ContractNumber",
+				"type": "varchar"
+			},
+			{
+				"name": "Source_Origination",
+				"type": "varchar"
+			},
+			{
+				"name": "Billed_Date",
+				"type": "date"
+			},
+			{
+				"name": "EntryDate",
+				"type": "date"
+			},
+			{
+				"name": "SaleDate",
+				"type": "date"
+			},
+			{
+				"name": "CancelDate",
+				"type": "date"
+			},
+			{
+				"name": "CancelReasonDesc",
+				"type": "varchar"
+			},
+			{
+				"name": "ContractCancelledBilled",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "VIN",
+				"type": "varchar"
+			},
+			{
+				"name": "Accounting_Month",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Accounting_Year",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "SaleOdomoter",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CustFirstName",
+				"type": "varchar"
+			},
+			{
+				"name": "CustLastName",
+				"type": "varchar"
+			},
+			{
+				"name": "ContractTermMonth",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "ContractTermMiles",
+				"type": "varchar"
+			},
+			{
+				"name": "RetailRate",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "DealerCostRefund",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancel_Factor",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Cancel_Fee",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Dealer_Commission",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "CancelRetailRate",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Deductible",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Make",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "RPT745ClientDetails"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

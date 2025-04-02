@@ -1,5 +1,5 @@
 {
-	"name": "QBSQL",
+	"name": "QlikUnit",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",

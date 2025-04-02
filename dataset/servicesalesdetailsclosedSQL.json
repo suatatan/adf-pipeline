@@ -1,0 +1,427 @@
+{
+	"name": "servicesalesdetailsclosedSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "cora_acct_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "hostitemid",
+				"type": "varchar"
+			},
+			{
+				"name": "actualhours",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			},
+			{
+				"name": "addonflag",
+				"type": "varchar"
+			},
+			{
+				"name": "authorizationcode",
+				"type": "varchar"
+			},
+			{
+				"name": "bin1",
+				"type": "varchar"
+			},
+			{
+				"name": "class",
+				"type": "varchar"
+			},
+			{
+				"name": "comp",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "coresale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "cost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "description",
+				"type": "varchar"
+			},
+			{
+				"name": "employee",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "hostemplid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "hostronbr",
+				"type": "varchar"
+			},
+			{
+				"name": "istestentry",
+				"type": "varchar"
+			},
+			{
+				"name": "jobcode",
+				"type": "varchar"
+			},
+			{
+				"name": "jobcodedescription",
+				"type": "varchar"
+			},
+			{
+				"name": "joinronumber",
+				"type": "varchar"
+			},
+			{
+				"name": "kitindicator",
+				"type": "varchar"
+			},
+			{
+				"name": "labordescription",
+				"type": "varchar"
+			},
+			{
+				"name": "laborextprice",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "laborin DISC",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "laborout DISC",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "laborcost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "laborsale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "labortype",
+				"type": "varchar"
+			},
+			{
+				"name": "linecode",
+				"type": "varchar"
+			},
+			{
+				"name": "list",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "lopseqno",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "mcdpartspercentage",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "misccost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "miscsale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "opcode",
+				"type": "varchar"
+			},
+			{
+				"name": "opcodecategory",
+				"type": "varchar"
+			},
+			{
+				"name": "opcodedescription",
+				"type": "varchar"
+			},
+			{
+				"name": "opcodesource",
+				"type": "varchar"
+			},
+			{
+				"name": "opcodesubtype",
+				"type": "varchar"
+			},
+			{
+				"name": "opcodetype",
+				"type": "varchar"
+			},
+			{
+				"name": "optioncode",
+				"type": "varchar"
+			},
+			{
+				"name": "optioncodedescription",
+				"type": "varchar"
+			},
+			{
+				"name": "outsidesalesman",
+				"type": "varchar"
+			},
+			{
+				"name": "partscost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "partssale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "partscostaccount",
+				"type": "varchar"
+			},
+			{
+				"name": "partssaleaccount",
+				"type": "varchar"
+			},
+			{
+				"name": "partssalecompany",
+				"type": "varchar"
+			},
+			{
+				"name": "partssalejournal",
+				"type": "varchar"
+			},
+			{
+				"name": "paytypecode",
+				"type": "varchar"
+			},
+			{
+				"name": "pickemplid",
+				"type": "varchar"
+			},
+			{
+				"name": "pickitemid",
+				"type": "varchar"
+			},
+			{
+				"name": "quantityordered",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "quantitysold",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "referno",
+				"type": "varchar"
+			},
+			{
+				"name": "ronumber",
+				"type": "varchar"
+			},
+			{
+				"name": "roopendate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "roclosedate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "rosource",
+				"type": "varchar"
+			},
+			{
+				"name": "rowlastupdated",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "rowlastupdatedutc",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "saleprice",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "server_ip_addr",
+				"type": "varchar"
+			},
+			{
+				"name": "source",
+				"type": "varchar"
+			},
+			{
+				"name": "specstatus",
+				"type": "varchar"
+			},
+			{
+				"name": "srctype",
+				"type": "varchar"
+			},
+			{
+				"name": "startdate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "subletcost",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "subletsale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "subletvendor",
+				"type": "varchar"
+			},
+			{
+				"name": "techemplid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "techsplitlevel",
+				"type": "varchar"
+			},
+			{
+				"name": "techsplittype",
+				"type": "varchar"
+			},
+			{
+				"name": "timein",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "timeout",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "totaltechhours",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			},
+			{
+				"name": "unitservicecharge",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 4
+			},
+			{
+				"name": "vehid",
+				"type": "varchar"
+			},
+			{
+				"name": "whsecode",
+				"type": "varchar"
+			},
+			{
+				"name": "whseloctn",
+				"type": "varchar"
+			},
+			{
+				"name": "whsepartsalecompany",
+				"type": "varchar"
+			},
+			{
+				"name": "whsepartsalejournal",
+				"type": "varchar"
+			},
+			{
+				"name": "whsepartssaleaccount",
+				"type": "varchar"
+			},
+			{
+				"name": "whsepartssalecompany",
+				"type": "varchar"
+			},
+			{
+				"name": "whsepartssalejournal",
+				"type": "varchar"
+			},
+			{
+				"name": "lopdiscseqnos",
+				"type": "varchar"
+			},
+			{
+				"name": "join_cora_acct_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "cora_acct_code",
+				"type": "varchar"
+			},
+			{
+				"name": "de_server_ip_addr",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "cdk_servicesalesdetailsclosed_v_1"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

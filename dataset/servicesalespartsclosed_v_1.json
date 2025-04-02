@@ -1,0 +1,193 @@
+{
+	"name": "servicesalespartsclosed_v_1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "servicesalespartsclosed_v_1.csv",
+				"container": "cdk-external-sandbox"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "hostitemid",
+				"type": "String"
+			},
+			{
+				"name": "cora_acct_id",
+				"type": "String"
+			},
+			{
+				"name": "rowlastupdated",
+				"type": "String"
+			},
+			{
+				"name": "rowlastupdatedutc",
+				"type": "String"
+			},
+			{
+				"name": "bin1",
+				"type": "String"
+			},
+			{
+				"name": "class",
+				"type": "String"
+			},
+			{
+				"name": "comp",
+				"type": "String"
+			},
+			{
+				"name": "coresale",
+				"type": "String"
+			},
+			{
+				"name": "cost",
+				"type": "String"
+			},
+			{
+				"name": "description",
+				"type": "String"
+			},
+			{
+				"name": "employee",
+				"type": "String"
+			},
+			{
+				"name": "kitindicator",
+				"type": "String"
+			},
+			{
+				"name": "labortype",
+				"type": "String"
+			},
+			{
+				"name": "linecode",
+				"type": "String"
+			},
+			{
+				"name": "list",
+				"type": "String"
+			},
+			{
+				"name": "lopseqno",
+				"type": "String"
+			},
+			{
+				"name": "mcdpartspercentage",
+				"type": "String"
+			},
+			{
+				"name": "misccost",
+				"type": "String"
+			},
+			{
+				"name": "miscsale",
+				"type": "String"
+			},
+			{
+				"name": "outsidesalesman",
+				"type": "String"
+			},
+			{
+				"name": "partnumber",
+				"type": "String"
+			},
+			{
+				"name": "partscomplinecode",
+				"type": "String"
+			},
+			{
+				"name": "partscoreaccount",
+				"type": "String"
+			},
+			{
+				"name": "partscorecost",
+				"type": "String"
+			},
+			{
+				"name": "partsextendedcost",
+				"type": "String"
+			},
+			{
+				"name": "partsextendedsale",
+				"type": "String"
+			},
+			{
+				"name": "partssaleaccount",
+				"type": "String"
+			},
+			{
+				"name": "partssalecompany",
+				"type": "String"
+			},
+			{
+				"name": "partssalejournal",
+				"type": "String"
+			},
+			{
+				"name": "pickitemid",
+				"type": "String"
+			},
+			{
+				"name": "quantityordered",
+				"type": "String"
+			},
+			{
+				"name": "quantitysold",
+				"type": "String"
+			},
+			{
+				"name": "referno",
+				"type": "String"
+			},
+			{
+				"name": "saleprice",
+				"type": "String"
+			},
+			{
+				"name": "source",
+				"type": "String"
+			},
+			{
+				"name": "specstatus",
+				"type": "String"
+			},
+			{
+				"name": "unitservicecharge",
+				"type": "String"
+			},
+			{
+				"name": "vehid",
+				"type": "String"
+			},
+			{
+				"name": "join_cora_acct_id",
+				"type": "String"
+			},
+			{
+				"name": "cora_acct_code",
+				"type": "String"
+			},
+			{
+				"name": "de_server_ip_addr",
+				"type": "String"
+			},
+			{
+				"name": "server_ip_addr",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

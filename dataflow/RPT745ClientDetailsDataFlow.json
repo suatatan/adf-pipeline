@@ -1,0 +1,114 @@
+{
+	"name": "RPT745ClientDetailsDataFlow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "RPT745ClientDetails",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "RPT745ClientDetailsSQL",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          DealerNumber as string,",
+				"          DealerName as string,",
+				"          Transaction_Type as string,",
+				"          Product_Description as string,",
+				"          CoverageCode as string,",
+				"          CoverageDesc as string,",
+				"          ContractNumber as string,",
+				"          Source_Origination as string,",
+				"          Billed_Date as string,",
+				"          EntryDate as string,",
+				"          SaleDate as string,",
+				"          CancelDate as string,",
+				"          CancelReasonDesc as string,",
+				"          ContractCancelledBilled as string,",
+				"          VIN as string,",
+				"          Accounting_Month as string,",
+				"          Accounting_Year as string,",
+				"          SaleOdomoter as string,",
+				"          CustFirstName as string,",
+				"          CustLastName as string,",
+				"          ContractTermMonth as string,",
+				"          ContractTermMiles as string,",
+				"          RetailRate as string,",
+				"          DealerCostRefund as string,",
+				"          Cancel_Factor as string,",
+				"          Cancel_Fee as string,",
+				"          Dealer_Commission as string,",
+				"          CancelRetailRate as string,",
+				"          Deductible as string,",
+				"          Make as string",
+				"     ),",
+				"     allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(each(match(1==1), $$ = replace(trim($$), '$', ''))) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     input(",
+				"          DealerNumber as string,",
+				"          DealerName as string,",
+				"          Transaction_Type as string,",
+				"          Product_Description as string,",
+				"          CoverageCode as string,",
+				"          CoverageDesc as string,",
+				"          ContractNumber as string,",
+				"          Source_Origination as string,",
+				"          Billed_Date as date,",
+				"          EntryDate as date,",
+				"          SaleDate as date,",
+				"          CancelDate as date,",
+				"          CancelReasonDesc as string,",
+				"          ContractCancelledBilled as decimal(18,2),",
+				"          VIN as string,",
+				"          Accounting_Month as decimal(18,2),",
+				"          Accounting_Year as decimal(18,2),",
+				"          SaleOdomoter as decimal(18,2),",
+				"          CustFirstName as string,",
+				"          CustLastName as string,",
+				"          ContractTermMonth as decimal(18,2),",
+				"          ContractTermMiles as string,",
+				"          RetailRate as decimal(18,2),",
+				"          DealerCostRefund as decimal(18,2),",
+				"          Cancel_Factor as decimal(18,2),",
+				"          Cancel_Fee as decimal(18,2),",
+				"          Dealer_Commission as decimal(18,2),",
+				"          CancelRetailRate as decimal(18,2),",
+				"          Deductible as decimal(18,2),",
+				"          Make as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          each(match(/* All input columns */true()),",
+				"               /* Input name */$$ = $$)",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

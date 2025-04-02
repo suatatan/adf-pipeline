@@ -1,0 +1,9 @@
+{
+	"name": "excela-data-factory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4baf42a5-8861-4dd0-b3e3-03e6876d8a25",
+		"tenantId": "89f05f50-1321-4bd8-926d-027334006fcf"
+	}
+}

@@ -1,13 +1,37 @@
 {
-	"name": "ClaimExport",
+	"name": "QBEXCLEarnings",
 	"properties": {
 		"activities": [
 			{
-				"name": "Archive Original File",
+				"name": "QBEXCLEarningsDataFlow",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "QBEXCLEarningsDataFlow",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "QBEXCLEarningsArchive",
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "ClaimExportDataFlow",
+						"activity": "QBEXCLEarningsDataFlow",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -56,13 +80,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ClaimExport",
+						"referenceName": "QBEXCLEarnings",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ClaimExportArchive",
+						"referenceName": "QBEXCLEarningsArchive",
 						"type": "DatasetReference"
 					}
 				]
@@ -72,7 +96,7 @@
 				"type": "Delete",
 				"dependsOn": [
 					{
-						"activity": "Archive Original File",
+						"activity": "QBEXCLEarningsArchive",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -88,7 +112,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ClaimExport",
+						"referenceName": "QBEXCLEarnings",
 						"type": "DatasetReference"
 					},
 					"logStorageSettings": {
@@ -103,30 +127,6 @@
 						"recursive": true,
 						"enablePartitionDiscovery": false
 					}
-				}
-			},
-			{
-				"name": "ClaimExportDataFlow",
-				"type": "ExecuteDataFlow",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"dataflow": {
-						"referenceName": "ClaimExportDataFlow",
-						"type": "DataFlowReference"
-					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
-					},
-					"traceLevel": "Fine"
 				}
 			}
 		],

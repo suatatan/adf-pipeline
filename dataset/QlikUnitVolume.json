@@ -1,0 +1,249 @@
+{
+	"name": "QlikUnitVolume",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "QlikUnitVolume.csv",
+				"folderPath": "Underwriting Report",
+				"container": "datafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Store",
+				"type": "String"
+			},
+			{
+				"name": "Region",
+				"type": "String"
+			},
+			{
+				"name": "Month Year",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Deal Type",
+				"type": "String"
+			},
+			{
+				"name": "Refer",
+				"type": "String"
+			},
+			{
+				"name": "Deal No",
+				"type": "String"
+			},
+			{
+				"name": "Jrnl",
+				"type": "String"
+			},
+			{
+				"name": "Sales Mgr",
+				"type": "String"
+			},
+			{
+				"name": "F&I Mgr",
+				"type": "String"
+			},
+			{
+				"name": "Last Name",
+				"type": "String"
+			},
+			{
+				"name": "First Name",
+				"type": "String"
+			},
+			{
+				"name": "City",
+				"type": "String"
+			},
+			{
+				"name": "State",
+				"type": "String"
+			},
+			{
+				"name": "ZIP",
+				"type": "String"
+			},
+			{
+				"name": "Make",
+				"type": "String"
+			},
+			{
+				"name": "Model",
+				"type": "String"
+			},
+			{
+				"name": "Model Yr",
+				"type": "String"
+			},
+			{
+				"name": "VIN",
+				"type": "String"
+			},
+			{
+				"name": "Miles",
+				"type": "String"
+			},
+			{
+				"name": "Sale Type",
+				"type": "String"
+			},
+			{
+				"name": "Buy Rate",
+				"type": "String"
+			},
+			{
+				"name": "Sell Rate",
+				"type": "String"
+			},
+			{
+				"name": "Days In Stk",
+				"type": "String"
+			},
+			{
+				"name": "Appraiser",
+				"type": "String"
+			},
+			{
+				"name": "Units ()",
+				"type": "String"
+			},
+			{
+				"name": "Sales ()",
+				"type": "String"
+			},
+			{
+				"name": "Cost ()",
+				"type": "String"
+			},
+			{
+				"name": "Incentives ()",
+				"type": "String"
+			},
+			{
+				"name": "Front ()",
+				"type": "String"
+			},
+			{
+				"name": "FI $ ()",
+				"type": "String"
+			},
+			{
+				"name": "VSC $ ()",
+				"type": "String"
+			},
+			{
+				"name": "PPM $ ()",
+				"type": "String"
+			},
+			{
+				"name": "GAP $ ()",
+				"type": "String"
+			},
+			{
+				"name": "APPEAR $ ()",
+				"type": "String"
+			},
+			{
+				"name": "KEY $ ()",
+				"type": "String"
+			},
+			{
+				"name": "RHT $ ()",
+				"type": "String"
+			},
+			{
+				"name": "DENT $ ()",
+				"type": "String"
+			},
+			{
+				"name": "KAHU/LOJACK $ ()",
+				"type": "String"
+			},
+			{
+				"name": "AFTERMARKET $ ()",
+				"type": "String"
+			},
+			{
+				"name": "Back ()",
+				"type": "String"
+			},
+			{
+				"name": "Deal ()",
+				"type": "String"
+			},
+			{
+				"name": "Trade Allow ()",
+				"type": "String"
+			},
+			{
+				"name": "Trade ACV ()",
+				"type": "String"
+			},
+			{
+				"name": "Trade O/U ()",
+				"type": "String"
+			},
+			{
+				"name": "List Price",
+				"type": "String"
+			},
+			{
+				"name": "Trade 1 VIN",
+				"type": "String"
+			},
+			{
+				"name": "Trade 2 VIN",
+				"type": "String"
+			},
+			{
+				"name": "Avg Payment ()",
+				"type": "String"
+			},
+			{
+				"name": "fidealtype",
+				"type": "String"
+			},
+			{
+				"name": "dealtype_orig",
+				"type": "String"
+			},
+			{
+				"name": "slsdealtype",
+				"type": "String"
+			},
+			{
+				"name": "salesmanagementdealtype",
+				"type": "String"
+			},
+			{
+				"name": "crmsaletype",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
