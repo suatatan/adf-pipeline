@@ -1,0 +1,16 @@
+{
+	"name": "labortype_v_1SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "labortype_v_1"
+		}
+	}
+}

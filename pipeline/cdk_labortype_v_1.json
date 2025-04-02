@@ -26,11 +26,23 @@
 							"type": "JsonReadSettings"
 						}
 					},
+					"sink": {
+						"type": "SqlServerSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate"
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "labortype_v_1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "labortype_v_1SQL",
 						"type": "DatasetReference"
 					}
 				]
