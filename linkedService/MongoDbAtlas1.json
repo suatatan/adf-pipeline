@@ -8,7 +8,7 @@
 			"connectionString": "mongodb+srv://suatatan:@cluster0-prod-dp.mbeyj.mongodb.net",
 			"database": "cluster0-prod-dp",
 			"driverVersion": "v2",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDY3M0MzM0RDLUQ2Q0MtNDI2Ri04RDMwLTkwQTRDMEZBRDNCRl84YTgwMWI0ZS0wNDRiLTRkYTgtOWI5My1iMjY3ZjVlYzFjY2IiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDY3M0MzM0RDLUQ2Q0MtNDI2Ri04RDMwLTkwQTRDMEZBRDNCRl82MzUzNmRhZi1jYzU3LTRiNzQtOTVkOC0wMGIyMjRiNTI2MTciDQp9"
 		}
 	}
 }
